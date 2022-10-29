@@ -14,11 +14,11 @@ GestaoHorarios::GestaoHorarios(std::set<Estudante> *Estudantes, std::vector<Turm
     horario = *Horario;
 }
 
-std::set<Estudante> GestaoHorarios::getEstudantes() {
+std::set<Estudante> GestaoHorarios::getEstudantes() const{
     return estudantes;
 }
 
-std::vector<TurmaH> GestaoHorarios::getHorario() {
+std::vector<TurmaH> GestaoHorarios::getHorario() const{
     return horario;
 }
 

@@ -19,14 +19,14 @@ private:
     std::queue<Pedido> pedidos;
 public:
     Estudante(int Numero, std::string *Estatuto, std::string *Nome, std::list<UcTurma> *Turmas, std::queue<Pedido> *Pedidos);
-    int getNumero();
+    int getNumero() const;
     void setNumero(int Numero);
-    std::string getEestatuto();
+    std::string getEestatuto() const;
     void setEestatuto(std::string Estatuto);
-    std::string getNome();
+    std::string getNome() const;
     void setNome(std::string Nome);
-    std::list<UcTurma> getTurmas();
-    std::queue<Pedido> getPedidos();
+    std::list<UcTurma> getTurmas() const;
+    std::queue<Pedido> getPedidos() const;
 };
 
 #endif //ESTUDANTE_H

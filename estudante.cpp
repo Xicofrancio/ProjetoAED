@@ -18,7 +18,7 @@ Estudante::Estudante(int Numero, std::string *Estatuto, std::string *Nome, std::
     pedidos = *Pedidos;
 };
 
-int Estudante::getNumero() {
+int Estudante::getNumero() const{
     return numero;
 };
 
@@ -26,7 +26,7 @@ void Estudante::setNumero(int Numero) {
     numero = Numero;
 };
 
-std::string Estudante::getEestatuto() {
+std::string Estudante::getEestatuto() const{
     return estatuto;
 };
 
@@ -34,7 +34,7 @@ void Estudante::setEestatuto(std::string Estatuto) {
     estatuto = Estatuto;
 };
 
-std::string Estudante::getNome() {
+std::string Estudante::getNome() const{
     return nome;
 };
 
@@ -42,11 +42,11 @@ void Estudante::setNome(std::string Nome) {
     nome = Nome;
 };
 
-std::list<UcTurma> Estudante::getTurmas() {
+std::list<UcTurma> Estudante::getTurmas() const{
     return turmas;
 };
 
-std::queue<Pedido> Estudante::getPedidos() {
+std::queue<Pedido> Estudante::getPedidos() const{
     return pedidos;
 };
 

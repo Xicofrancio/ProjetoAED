@@ -12,13 +12,13 @@ private:
     float horaFim;
     std::string tipo;
 public:
-    std::string getDia() ;
+    std::string getDia() const;
     void setDia(std::string *Dia);
-    float getHoraInicio();
+    float getHoraInicio() const;
     void setHoraInicio(float HoraInicio);
-    float getHoraFim();
+    float getHoraFim() const;
     void setHoraFim(float HoraFim);
-    std::string getTipo();
+    std::string getTipo() const;
     void setTipo(std::string *Tipo);
     Slot(std::string *Dia, float HoraInicio, float HoraFim, std::string *Tipo);
 };

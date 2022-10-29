@@ -16,19 +16,19 @@ Slot::Slot(std::string *Dia, float HoraInicio, float HoraFim, std::string *Tipo)
     tipo = *Tipo;
 }
 
-std::string Slot::getDia() {
+std::string Slot::getDia() const{
     return dia;
 }
 
-float Slot::getHoraInicio() {
+float Slot::getHoraInicio() const{
     return horaInicio;
 }
 
-float Slot::getHoraFim() {
+float Slot::getHoraFim() const{
     return horaFim;
 }
 
-std::string Slot::getTipo() {
+std::string Slot::getTipo() const{
     return tipo;
 }
 

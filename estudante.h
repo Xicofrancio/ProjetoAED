@@ -4,6 +4,7 @@
 
 #include <list>
 #include <queue>
+#include <string>
 #include "ucturma.h"
 #include "pedido.h"
 #ifndef ESTUDANTE_H
@@ -17,18 +18,15 @@ private:
     std::list<UcTurma> turmas;
     std::queue<Pedido> pedidos;
 public:
-    Estudante();
-    Estudante(int Numero, std::string Estatuto, std::string Nome, std::list<UcTurma> Turmas, std::queue<Pedido> Pedidos);
+    Estudante(int Numero, std::string *Estatuto, std::string *Nome, std::list<UcTurma> *Turmas, std::queue<Pedido> *Pedidos);
     int getNumero();
-    void setNumero();
+    void setNumero(int Numero);
     std::string getEestatuto();
-    void setEestatuto();
+    void setEestatuto(std::string Estatuto);
     std::string getNome();
-    void setNome();
+    void setNome(std::string Nome);
     std::list<UcTurma> getTurmas();
-    void setTurmas();
     std::queue<Pedido> getPedidos();
-    void setPedidos();
 };
 
 #endif //ESTUDANTE_H

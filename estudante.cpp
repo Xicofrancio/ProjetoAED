@@ -10,45 +10,23 @@
 
 using namespace std;
 
-Estudante::Estudante(int Numero, std::string *Estatuto, std::string *Nome, std::list<UcTurma> *Turmas, std::queue<Pedido> *Pedidos) {
-    numero= Numero;
-    estatuto= *Estatuto;
-    nome = *Nome;
-    turmas = *Turmas;
-    pedidos = *Pedidos;
-};
+Estudante::Estudante(int Numero, std::string *Estatuto, std::string *Nome, std::list<UcTurma> *Turmas, std::queue<Pedido> *Pedidos) {numero= Numero; estatuto= *Estatuto; nome = *Nome; turmas = *Turmas; pedidos = *Pedidos;};
 
-int Estudante::getNumero() const{
-    return numero;
-};
+int Estudante::getNumero() const{return numero;};
 
-void Estudante::setNumero(int Numero) {
-    numero = Numero;
-};
+void Estudante::setNumero(int Numero) {numero = Numero;};
 
-std::string Estudante::getEestatuto() const{
-    return estatuto;
-};
+std::string Estudante::getEestatuto() const{return estatuto;};
 
-void Estudante::setEestatuto(std::string Estatuto) {
-    estatuto = Estatuto;
-};
+void Estudante::setEestatuto(std::string Estatuto) {estatuto = Estatuto;};
 
-std::string Estudante::getNome() const{
-    return nome;
-};
+std::string Estudante::getNome() const{return nome;};
 
-void Estudante::setNome(std::string Nome) {
-    nome = Nome;
-};
+void Estudante::setNome(std::string Nome) {nome = Nome;};
 
-std::list<UcTurma> Estudante::getTurmas() const{
-    return turmas;
-};
+std::list<UcTurma> Estudante::getTurmas() const{return turmas;};
 
-std::queue<Pedido> Estudante::getPedidos() const{
-    return pedidos;
-};
+std::queue<Pedido> Estudante::getPedidos() const{return pedidos;};
 
 
 

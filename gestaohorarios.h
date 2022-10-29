@@ -3,6 +3,7 @@
 //
 #include <set>
 #include <vector>
+#include <string>
 #include "estudante.h"
 #include "turmah.h"
 #ifndef GESTAOHORARIOS_H
@@ -14,9 +15,9 @@ private:
     std::vector<TurmaH> horario;
 public:
     std::set<Estudante> getEstudantes();
-    void setEstudantes();
     std::vector<TurmaH> getHorario();
-    void setHorario();
-    GestaoHorarios(std::set<Estudante> Estudantes, std::vector<TurmaH> Horario);
+    void setEstudantes(std::set<Estudante> *Estudantes);
+    void setHorario(std::vector<TurmaH> *Horario);
+    GestaoHorarios(std::set<Estudante> *Estudantes, std::vector<TurmaH> *Horario);
 };
 #endif //GESTAOHORARIOS_H

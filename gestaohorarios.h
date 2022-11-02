@@ -16,8 +16,8 @@ private:
 public:
     std::set<Estudante> getEstudantes() const;
     std::vector<TurmaH> getHorario() const;
-    void setEstudantes(std::set<Estudante> *Estudantes);
-    void setHorario(std::vector<TurmaH> *Horario);
-    GestaoHorarios(std::set<Estudante> *Estudantes, std::vector<TurmaH> *Horario);
+    void setEstudantes(std::set<Estudante> Estudantes);
+    void setHorario(std::vector<TurmaH> Horario);
+    GestaoHorarios(std::set<Estudante> Estudantes, std::vector<TurmaH> Horario);
 };
 #endif //GESTAOHORARIOS_H

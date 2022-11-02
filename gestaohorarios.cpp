@@ -9,9 +9,9 @@
 #include "turmah.h"
 #include "ucturma.h"
 
-GestaoHorarios::GestaoHorarios(std::set<Estudante> *Estudantes, std::vector<TurmaH> *Horario) {
-    estudantes = *Estudantes;
-    horario = *Horario;
+GestaoHorarios::GestaoHorarios(std::set<Estudante> Estudantes, std::vector<TurmaH> Horario) {
+    estudantes = Estudantes;
+    horario = Horario;
 }
 
 std::set<Estudante> GestaoHorarios::getEstudantes() const{
@@ -22,11 +22,11 @@ std::vector<TurmaH> GestaoHorarios::getHorario() const{
     return horario;
 }
 
-void GestaoHorarios::setEstudantes(std::set<Estudante> *Estudantes) {
-    estudantes = *Estudantes;
+void GestaoHorarios::setEstudantes(std::set<Estudante> Estudantes) {
+    estudantes = Estudantes;
 }
 
-void GestaoHorarios::setHorario(std::vector<TurmaH> *Horario) {
-    horario = *Horario;
+void GestaoHorarios::setHorario(std::vector<TurmaH> Horario) {
+    horario = Horario;
 }
 

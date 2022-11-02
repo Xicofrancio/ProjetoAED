@@ -13,12 +13,12 @@ private:
     std::list<Slot> horarioUcTurma;
 public:
     std::string getCodUc() const;
-    void setCodUc(std::string *CodUc);
+    void setCodUc(std::string CodUc);
     std::string getCodTurma() const;
-    void setCodTurma(std::string *CodTurma);
+    void setCodTurma(std::string CodTurma);
     std::list<Slot> getHorarioUcTurma() const;
-    void setHorarioUcTurma(std::list<Slot> *HorarioUcTurma);
-    TurmaH(std::string *CodUc, std::string *CodTurma, std::list<Slot> *HorarioUcTurma);
+    void setHorarioUcTurma(std::list<Slot> HorarioUcTurma);
+    TurmaH(std::string CodUc, std::string CodTurma, std::list<Slot> HorarioUcTurma);
 };
 
 #endif //TURMAH_H

@@ -5,7 +5,6 @@
 #ifndef SLOT_H
 #define SLOT_H
 
-
 class Slot{
 private:
     std::string dia;
@@ -14,14 +13,14 @@ private:
     std::string tipo;
 public:
     std::string getDia() const;
-    void setDia(std::string *Dia);
+    void setDia(std::string Dia);
     float getHoraInicio() const;
     void setHoraInicio(float HoraInicio);
     float getHoraFim() const;
     void setHoraFim(float HoraFim);
     std::string getTipo() const;
-    void setTipo(std::string *Tipo);
-    Slot(std::string *Dia, float HoraInicio, float HoraFim, std::string *Tipo);
+    void setTipo(std::string Tipo);
+    Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo);
 };
 
 #endif //SLOT_H

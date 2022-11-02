@@ -24,6 +24,7 @@ public:
     int getNumero() const;
     void setNumero(int Numero);
     std::string getEestatuto() const;
+
     void setEestatuto(std::string Estatuto);
     std::string getNome() const;
     void setNome(std::string Nome);

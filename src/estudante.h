@@ -16,23 +16,19 @@ class Pedido;
 class Estudante{
 private:
     int numero;
-    std::string estatuto;
     std::string nome;
     std::list<UcTurma> turmas;
 public:
-    Estudante(int Numero, std::string Estatuto, std::string Nome, std::list<UcTurma> Turmas);
+    Estudante(int Numero, std::string Nome);
     int getNumero() const;
     void setNumero(int Numero);
-    std::string getEestatuto() const;
-
-    void setEestatuto(std::string Estatuto);
     std::string getNome() const;
     void setNome(std::string Nome);
     std::list<UcTurma> getTurmas() const;
-    void addUcTurma(UcTurma ucTurma) const;
-    void rmUcTurma(UcTurma ucTurma) const;
-    bool operator<(const Estudante estudante);
-    bool operator==(const Estudante estudante);
+    void addUcTurma(const UcTurma ucTurma);
+    void rmUcTurma(const UcTurma ucTurma);
+    bool operator<(const Estudante estudante) const;
+    bool operator==(const Estudante estudante) const;
 };
 
 #endif //ESTUDANTE_H

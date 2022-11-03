@@ -3,13 +3,13 @@
 //
 
 #include "estudante.h"
-#include "gestaohorarios.h"
+#include "gestordehorarios.h"
 #include "pedido.h"
 #include "slot.h"
 #include "turmah.h"
 #include "ucturma.h"
 
-TurmaH::TurmaH(std::string *CodUc, std::string CodTurma, std::list<Slot> HorarioUcTurma){codUc = CodUc; codTurma = CodTurma; horarioUcTurma = HorarioUcTurma;}
+TurmaH::TurmaH(std::string CodUc, std::string CodTurma){codUc = CodUc; codTurma = CodTurma;}
 
 std::string TurmaH::getCodTurma() const{return codTurma;}
 
@@ -17,8 +17,6 @@ std::string TurmaH::getCodUc() const{return codUc;}
 
 std::list<Slot> TurmaH::getHorarioUcTurma() const{return horarioUcTurma;}
 
-void TurmaH::setCodTurma(std::string CodTurma) {codTurma = CodTurma;}
+int TurmaH::get_num_estudantes() {return num_estudantes;}
 
-void TurmaH::setCodUc(std::string CodUc) {codUc = CodUc;}
-
-void TurmaH::setHorarioUcTurma(std::list<Slot> HorarioUcTurma) {horarioUcTurma = HorarioUcTurma;}
+void TurmaH::addHorarioUcTurma(Slot SlotUcTurma) {horarioUcTurma.push_back(SlotUcTurma);}

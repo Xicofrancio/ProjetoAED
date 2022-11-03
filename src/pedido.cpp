@@ -4,16 +4,16 @@
 
 #include "pedido.h"
 
-Pedido::Pedido(const Estudante &estudante, std::string tipo): estudante(estudante),tipo(tipo) {}
+Pedido::Pedido(const Estudante estudante, std::string tipo): estudante(estudante),tipo(tipo) {}
 
-Estudante Pedido::getEstudante() {return this -> estudante;}
+Estudante Pedido::getEstudante() {return estudante;}
 
-std::string Pedido ::getTipoPedido() {return this -> tipo;}
+std::string Pedido ::getTipoPedido() {return tipo;}
 
-std::vector<UcTurma> Pedido::getUcDesejadas() {return this->UcTurmadesejadas;}
+std::vector<UcTurma> Pedido::getUcDesejadas() {return UcTurmaDesejadas;}
 
-void Pedido::setEstudante(const Estudante estudante) {this -> estudante;}
+void Pedido::setEstudante(const Estudante Estudante1) {estudante = Estudante1;}
 
-void Pedido::setTipoPedido(std::string tipo) {this-> tipo;}
+void Pedido::setTipoPedido(std::string Tipo) {tipo=Tipo;}
 
-void Pedido::addUcdesejada(const UcTurma UcTurmadesejada) {this-> UcTurmadesejadas.push_back(UcTurmadesejada);}
+void Pedido::addUcDesejada(const UcTurma UcTurmaDesejada) {UcTurmaDesejadas.push_back(UcTurmaDesejada);}

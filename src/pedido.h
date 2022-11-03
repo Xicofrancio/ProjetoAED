@@ -8,14 +8,14 @@ class Pedido{
 private:
     std::string tipo;
     Estudante estudante;
-    std::vector<UcTurma> UcTurmadesejadas;
+    std::vector<UcTurma> UcTurmaDesejadas;
 public:
-    Pedido(const Estudante &estudante, std::string tipo);
+    Pedido( Estudante Estudante1, std::string Tipo);
     Estudante getEstudante();
     std::vector<UcTurma> getUcDesejadas();
     std::string getTipoPedido();
-    void setEstudante(const Estudante estudante);
-    void addUcdesejada(const UcTurma UcTurmadesejada);
+    void setEstudante(const Estudante Estudante1);
+    void addUcDesejada(const UcTurma UcTurmaDesejada);
     void setTipoPedido(std::string tipo);
 };
 

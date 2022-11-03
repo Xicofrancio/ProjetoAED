@@ -3,7 +3,6 @@
 //
 
 #include "estudante.h"
-#include "gestaohorarios.h"
 #include "turmah.h"
 #include "ucturma.h"
 
@@ -16,3 +15,9 @@ std::string UcTurma::getCodUc() const{return codUc;}
 void UcTurma::setCodTurma(std::string CodTurma) {codTurma = CodTurma;}
 
 void UcTurma::setCodUc(std::string CodUc) {codUc = CodUc;}
+
+bool UcTurma::operator==(const UcTurma ucTurma) const { codUc == ucTurma.codUc && codTurma == ucTurma.codTurma;}
+UcTurma::UcTurma() {
+    codTurma = "";
+    codUc = "";
+}

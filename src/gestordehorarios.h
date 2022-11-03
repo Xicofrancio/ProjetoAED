@@ -10,14 +10,14 @@
 using namespace std;
 
 
-class helper {
+class gestordehorarios {
 private:
     set <Estudante> estudantes;
     vector <Pedido> pedidosRejeitados;
     vector <TurmaH> horario;
     queue <Pedido> pedidosHold;
 public:
-    UCTurma inputUCTurma();
+    UcTurma inputUCTurma();
 
     int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
 
@@ -32,6 +32,11 @@ public:
     void addHora();
 
     void addEstudante();
+
+    bool pedidoPossivel(const vector<Slot> newSchedule);
+
+    vector<Slot> newSchedule(const list<UcTurma> turmas, const vector<Ucturma> newturmas);
+
 };
 
 

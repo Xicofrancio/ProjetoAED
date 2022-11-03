@@ -8,18 +8,18 @@ using namespace std;
 
 class Alteracao {
 private:
-    UCTurma &atual;
-    UCTurma &pretendida;
+    UcTurma &atual;
+    UcTurma &desejada;
 public:
-    Alteracao(UCTurma &atual, UCTurma &desejada);
+    Alteracao(UcTurma &atual, UcTurma &desejada);
 
-    UCTurma getPretendida();
+    UCTurma getDesejada();
 
     UCTurma getAtual();
 
-    void setPretendida(UCTurma desejada);
+    void setDesejada(UcTurma Desejada);
 
-    void setAtual(UCTurma atual);
+    void setAtual(UcTurma Atual);
 };
 
 #endif //ALTERACAO_H

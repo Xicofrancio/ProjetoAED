@@ -11,6 +11,7 @@ private:
     float horaInicio;
     float horaFim;
     std::string tipo;
+    float duracao;
 public:
     std::string getDia() const;
     void setDia(std::string Dia);
@@ -18,9 +19,16 @@ public:
     void setHoraInicio(float HoraInicio);
     float getHoraFim() const;
     void setHoraFim(float HoraFim);
+    void setDuracao(float Duracao);
+    float getDuracao() const;
+
     std::string getTipo() const;
     void setTipo(std::string Tipo);
-    Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo);
+
+    Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float duracao);
+    Slot();
+
+    bool erro(Slot slot)const;
 };
 
 #endif //SLOT_H

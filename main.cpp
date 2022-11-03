@@ -2,17 +2,17 @@
 #include <sstream>
 #include <fstream> //Para ler o ficheiro .csv
 #include <vector>
-#include "estudante.h"
-#include "gestaohorarios.h"
-#include "turmah.h"
-#include "ucturma.h"
+#include "src/estudante.h"
+#include "src/gestordehorarios.h"
+#include "src/turmah.h"
+#include "src/ucturma.h"
 
 using namespace std;
 
 void ler(){
     list<UcTurma> UCTURMAS;
     ifstream inputfile;
-    inputfile.open("/Users/davidcastro/CLionProjects/projetomacosedition/classes_per_uc.csv");
+    inputfile.open("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
     string line;
     getline(inputfile,line);
     while(getline(inputfile,line)){

@@ -25,7 +25,7 @@ public:
     std::string getTipo() const;
     void setTipo(std::string Tipo);
 
-    Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float duracao);
+    Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float Duracao);
     Slot();
 
     bool erro(Slot slot)const;

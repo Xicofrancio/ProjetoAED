@@ -1,5 +1,6 @@
 using namespace std;
 #include <iostream>
+
 #include "alteracao.h"
 #include "estudante.h"
 #include "gestordehorarios.h"
@@ -10,13 +11,16 @@ using namespace std;
 
 void helper(){
     cout<<"Que operação quer executar?"<<endl<< "1) fazer um pedido (alteração de horario)" << "2) visualizar horário,turma e uc"<<endl;
-    cin<< int n;
+    int n;
+    int i;
+    std::string Tipo;
+    cin >> n;
     if (n == 1){
         cout << "Número do aluno:" << endl;
-        cin << int i;
+        cin >> i;
         cout << "Troca pretendida:" << endl;
-        cin << std::string Tipo;
-        for (auto c:) {
+        cin >> Tipo;
+        for (auto c: ) {
             if (c.numero == i) {
                 Pedido pedido(c, Tipo);
             }

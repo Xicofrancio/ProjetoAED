@@ -13,9 +13,9 @@ private:
 public:
     Alteracao(UcTurma &atual, UcTurma &desejada);
 
-    UCTurma getDesejada();
+    UcTurma getDesejada();
 
-    UCTurma getAtual();
+    UcTurma getAtual();
 
     void setDesejada(UcTurma Desejada);
 

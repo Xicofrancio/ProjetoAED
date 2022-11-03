@@ -9,7 +9,7 @@
 #include "turmah.h"
 #include "ucturma.h"
 
-Slot::Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float duracao) {dia = Dia; horaInicio = HoraInicio; horaFim = HoraFim; tipo = Tipo; duracao = Duracao;}
+Slot::Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float Duracao) {dia = Dia; horaInicio = HoraInicio; horaFim = HoraFim; tipo = Tipo; duracao = Duracao;}
 
 std::string Slot::getDia() const{return dia;}
 

@@ -35,7 +35,7 @@ public:
 
     bool pedidoPossivel(const vector<Slot> newSchedule);
 
-    vector<Slot> newSchedule(const list<UcTurma> turmas, const vector<Ucturma> newturmas);
+    vector<Slot> newSchedule(const list<UcTurma> turmas, const vector<UcTurma> newturmas);
 
 };
 

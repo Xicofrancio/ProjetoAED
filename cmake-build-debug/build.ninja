@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Projeto
+# Project: Fim
 # Configurations: Debug
 # =============================================================================
 
@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Projeto/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Projeto
 
@@ -49,11 +49,61 @@ cmake_ninja_workdir = C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ es
 
 build cmake_object_order_depends_target_Projeto: phony || CMakeFiles/Projeto.dir
 
-build CMakeFiles/Projeto.dir/main.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Projeto/main.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/main.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/main.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
   DEP_FILE = CMakeFiles\Projeto.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
   OBJECT_FILE_DIR = CMakeFiles\Projeto.dir
+
+build CMakeFiles/Projeto.dir/src/ucturma.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/ucturma.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\ucturma.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
+build CMakeFiles/Projeto.dir/src/cli.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/cli.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\cli.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
+build CMakeFiles/Projeto.dir/src/estudante.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/estudante.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\estudante.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
+build CMakeFiles/Projeto.dir/src/gestordehorarios.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/gestordehorarios.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\gestordehorarios.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
+build CMakeFiles/Projeto.dir/src/pedido.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/pedido.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\pedido.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
+build CMakeFiles/Projeto.dir/src/slot.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/slot.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\slot.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
+build CMakeFiles/Projeto.dir/src/turmah.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/turmah.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\turmah.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
 
 
 # =============================================================================
@@ -63,7 +113,7 @@ build CMakeFiles/Projeto.dir/main.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users
 #############################################
 # Link the executable Projeto.exe
 
-build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/main.cpp.obj
+build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/main.cpp.obj CMakeFiles/Projeto.dir/src/ucturma.cpp.obj CMakeFiles/Projeto.dir/src/cli.cpp.obj CMakeFiles/Projeto.dir/src/estudante.cpp.obj CMakeFiles/Projeto.dir/src/gestordehorarios.cpp.obj CMakeFiles/Projeto.dir/src/pedido.cpp.obj CMakeFiles/Projeto.dir/src/slot.cpp.obj CMakeFiles/Projeto.dir/src/turmah.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Projeto.dir
@@ -78,7 +128,7 @@ build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/m
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Projeto\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -89,7 +139,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Projeto\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Projeto" -B"C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Projeto\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim" -B"C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -107,7 +157,7 @@ build Projeto: phony Projeto.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Projeto/cmake-build-debug
+# Folder: C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/cmake-build-debug
 
 build all: phony Projeto.exe
 

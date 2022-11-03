@@ -10,7 +10,7 @@
 using namespace std;
 
 
-class gestor {
+class helper {
 private:
     set <Estudante> estudantes;
     vector <Pedido> pedidosRejeitados;

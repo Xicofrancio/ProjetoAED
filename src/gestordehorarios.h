@@ -1,5 +1,6 @@
-#ifndef PROJETOAED_GESTOR_H
-#define PROJETOAED_GESTOR_H
+#ifndef GESTOR_H
+#define GESTOR_H
+
 #include <vector>
 #include <set>
 #include <queue>
@@ -10,9 +11,9 @@
 using namespace std;
 
 
-class gestordehorarios {
+class GestorDeHorarios {
 private:
-    set <Estudante> estudantes;
+    set <Estudante> estudante;
     vector <Pedido> pedidosRejeitados;
     vector <TurmaH> horario;
     queue <Pedido> pedidosHold;
@@ -21,11 +22,11 @@ public:
 
     int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
 
-    int getCodTurma(string codUC, string codTurma);
+    int getCodigoTurma(string codUC, string codigoTurma);
 
     void concluirPedido();
 
-    void salvarPedido(const Estudante &estudante, Pedido tipo);
+    void salvarPedido(const Pedido &pedido);
 
     void addUC();
 
@@ -33,9 +34,13 @@ public:
 
     void addEstudante();
 
-    bool pedidoPossivel(const vector<Slot> newSchedule);
+    void novoEstudante();
 
-    vector<Slot> newSchedule(const list<UcTurma> turmas, const vector<UcTurma> newturmas);
+    bool pedidoPossivel(const vector <Slot> newSchedule);
+
+    list <Slot> getHorariosTurma(UCTurma turma);
+
+    vector <Slot> newSchedule(const list <UcTurma> turmas, const vector <Ucturma> newturmas);
 
 };
 

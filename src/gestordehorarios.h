@@ -23,7 +23,7 @@ public:
     int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
 
 
-    void concluirPedido();
+    bool concluirPedido();
 
     void salvarPedido(const Pedido pedido);
 

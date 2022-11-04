@@ -80,79 +80,94 @@ void GestorDeHorarios::addUC() {
     }
 }
 
-//void GestorDeHorarios::addHora() {
-//    string line;
-//    ifstream in("classes.csv");
-//
-//    getline(in, line);
-//    while (getline(in, line)) {
-//        vector <string> v{destroy(line, ',')};
-//        int a = getCodigoTurma(v[0], v[1]);
-//        DiaSemana dia = Slot::stringToDiaSemana(v[2]);
-//        TipoAula tipo = Slot::stringToTipo(v[5]);
-//        float hora = stof(v[3]);
-//        float duracao = stof(v[4]);
-//        Slot slot(dia, hora, duracao, tipo);
-//        this->horario[a].addHorarioUcTurma(slot);
-//    }
-//}
+void GestorDeHorarios::addHora() {
+    string line;
+    ifstream in("classes.csv");
+
+    getline(in, line);
+    while (getline(in, line)) {
+        vector <string> v{destroy(line, ',')};
+        int a = getCodigoTurma(v[0], v[1]);
+        DiaSemana dia = Slot::stringToDiaSemana(v[2]);
+        TipoAula tipo = Slot::stringToTipo(v[5]);
+        float hora = stof(v[3]);
+        float duracao = stof(v[4]);
+        Slot slot(dia, hora, duracao, tipo);
+        this->horario[a].addHorarioUcTurma(slot);
+    }
+}
 
 list <Slot> GestorDeHorarios::getHorariosTurma(UcTurma turma) {
     return this->horario.at(this->getCodigoTurma(turma.getCodUc(), turma.getCodTurma())).getHorarioUcTurma();
 }
 
-void GestorDeHorarios::addEstudante() {
-    string line;
-    ifstream in("students_classes.csv");
 
-    getline(in, line);
-    while (getline(in, line)) {
-        vector <string> v{destroy(line, ',')};
-        Estudante estudante(v[0], v[1]);
-        auto i = this->estudante.find(estudante);
-        if (i != this->estudante.end()) {
-            UcTurma ucTurma(v[2], v[3]);
-            i->addUcTurma(ucTurma);
-        } else
-            this->estudante.insert(estudante);
+vector<string> reducer(string Line, char& division){
+    string medium;
+
+    vector<string> result;
+    size_t pos;
+    while ((pos = Line.find(division)) != std::string::npos) {
+        string token = Line.substr(0, pos);
+        result.push_back(token);
+        Line.erase(0, pos + 1);
+    }
+    result.push_back(Line);
+    return result;
+}
+void genEstudantes() {
+    string line;
+    ifstream in("students_classes.csv\"");
+    if(in.is_open()) {
+        (getline(in, line));
+        while (getline(in, line)) {
+            char& b = (char& ) ",";
+            vector<string> Students =  reducer(line, b);
+            for(auto c: Students){
+                cout << "1: "<< Students[0] <<endl;// numero
+                cout << "2: "<< Students[1] <<endl;// nome
+                cout << "3: "<< Students[2] <<endl;// uc
+                cout << "4: "<< Students[3] <<endl;// turma
+            }
+
+        }
     }
 }
 
-//void GestorDeHorarios::concluirPedido() {
-//    vector <Slot> novoHorario;
-//    Pedido novoPedido = this->pedidosHold.front();
-//    switch (novoPedido.getTipoPedido()) {
-//        case REMOVER:
-//            novoPedido.getEstudante().rmUCTurma(novoPedido.getUCDesejadas().at(0));
-//            break;
-//        case ADICIONAR:
-//            size_t pos = this->getCodigoTurma(
-//                    novoPedido.getUCDesejadas().at(0).getCodUc(),
-//                    novoPedido.getUCDesejadas().at(0).getCodTurma());
-//
-//            for (auto i: this->horario.at(pos).getHorarioUcTurma())
-//                if (i.gettipo() == TP || i.gettipo() == PL)
-//                    novoHorario.push_back(i);
-//            for (auto i: novoPedido.getEstudante().getTurmas())
-//                for (auto j: this->horario.at(this->getCodigoTurma(i.getCodUc(), i.getCodTurma())).getHorarioUcTurma())
-//                    if (j.gettipo() == TP || j.gettipo() == PL)
-//                        novoHorario.push_back(j);
-//
-//
-//            break;
-//        case ALTERAR:
-//
-//            break;
-//        case ALTERARCONJ:
-//            break;
-//    }
-//}
+
+bool GestorDeHorarios::concluirPedido() {
+    if(this->pedidosHold.empty()) return false;
+    Pedido pedidoAtual = this->pedidosHold.front();
+    this->pedidosHold.pop();
+    vector<Slot> novoHorario;
+    switch (pedidoAtual.getTipoPedido()) {
+        case REMOVER:
+            pedidoAtual.getEstudante().rmUcTurma(pedidoAtual.getUcDesejadas().at(0));
+            this->getTurmaH(pedidoAtual.getUcDesejadas().at(0)).operator--();
+            return true;
+        case ADICIONAR:
+        case ALTERAR:
+        case ALTERARCONJ:
+            if(checkDisponibilidadeTurmas(pedidoAtual.getUCDesejadas(),
+                                          pedidoAtual.getTipoPedido(),
+                                          pedidoAtual.getEstudante())
+               && Gestor::compativel(this->novoHorario(pedidoAtual.getEstudante().getTurmas(),
+                                                       pedidoAtual.getUCDesejadas()))){
+                this->switchTurmasEstudante(pedidoAtual.getEstudante(),pedidoAtual.getUCDesejadas());
+                return true;
+            }else {
+                this->pedidosRejeitados.push_back(pedidoAtual);
+                return false;
+            }
+    }
+    return false;
+}
 
 
-//vector <Slot> GestorDeHorarios::newSchedule(const list <UcTurma> &turmas, const vector <UcTurma> &newTurmas) {
-//    vector <Slot> novoHorario;
-//    for (auto turma: turmas) {
-//
-//    }
+vector <Slot> GestorDeHorarios::newSchedule(const list <UcTurma> &turmas, const vector <UcTurma> &newTurmas) {
+    vector <Slot> novoHorario;
+    for (auto turma: turmas) {
+
+    }
 
 }

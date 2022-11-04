@@ -1,4 +1,3 @@
-
 #ifndef GESTOR_H
 #define GESTOR_H
 
@@ -19,30 +18,32 @@ private:
     vector <TurmaH> horario;
     queue <Pedido> pedidosHold;
 public:
-    UcTurma inputUCTurma();
+    TurmaH inputUCTurma();
 
-    int getNumeroEstudante(const string codigoEstudante, const string nomeEstudante);
+    int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
 
-    int getCodigoTurma(string codUC, string codigoTurma);
 
-    void concluirPedido();
+    bool concluirPedido();
 
     void salvarPedido(const Pedido pedido);
 
     void addUC();
 
-    void addHorario();
+    void addHora();
 
     void addEstudante();
 
     void novoEstudante();
 
-    bool pedidoPossivel(const vector <Slot> newSchedule);
+    TurmaH getTurmaH(const UcTurma& ucTurma) const;
 
     list <Slot> getHorariosTurma(UcTurma turma);
 
-    vector <Slot> newSchedule(const list <UcTurma> turmas, const vector <UcTurma> newturmas);
+    int getCodigoTurma(string codUC, const string &codigoTurma);
 
+    bool pedidoPossivel(const vector<Slot> &newSchedule);
+
+    vector<Slot> newSchedule(const list<UcTurma> &turmas, const vector<UcTurma> &newTurmas);
 };
 
 

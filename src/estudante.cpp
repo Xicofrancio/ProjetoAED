@@ -8,11 +8,11 @@
 
 using namespace std;
 
-Estudante::Estudante(int Numero, std::string Nome) {numero= Numero; nome = Nome;};
+Estudante::Estudante(string Numero, std::string Nome) {numero= Numero; nome = Nome;};
 
-int Estudante::getNumero() const{return numero;};
+string Estudante::getNumero() const{return numero;};
 
-void Estudante::setNumero(int Numero) {numero = Numero;};
+void Estudante::setNumero(string Numero) {numero = Numero;};
 
 std::string Estudante::getNome() const{return nome;};
 
@@ -20,7 +20,7 @@ void Estudante::setNome(std::string Nome) {nome = Nome;};
 
 std::list<UcTurma> Estudante::getTurmas() const{return turmas;}
 
-void  Estudante::addUcTurma(const UcTurma ucTurma){
+void  Estudante::addUcTurma(const UcTurma ucTurma) const {
     turmas.push_back(ucTurma);
 }
 

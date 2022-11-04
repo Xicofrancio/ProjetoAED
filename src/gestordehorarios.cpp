@@ -1,92 +1,18 @@
-/*
 #include <iostream>
 #include "gestordehorarios.h"
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Estudante.h"
-#include "UCTurma.h"
+#include "estudante.h"
+#include "ucturma.h"
 
 using namespace std;
 
 
-void GestorDeHorarios::salvarPedido(const Pedido &pedido) {
+void GestorDeHorarios::salvarPedido(const Pedido pedido) {
     this->pedidosHold.push(pedido);
 }
 
-
-
-int GestorDeHorarios::getNumeroEstudante(const std::string codigoEstudante, const std::string nomeEstudante) {
-    for (auto f: estudante) {
-        if (to_string(f.getNumero()) == codigoEstudante &&  f.getNome() == nomeEstudante) {
-            return f.getNumero();
-        }
-    }
-}
-
-int GestorDeHorarios::getCodigoTurma(const string codUC, const string codigoTurma) {
-    for(auto f : horario){
-        if(f.getCodTurma() == codigoTurma && f.getCodUc() == codUC){
-            return f;
-        }
-    }
-    return -1;
-}
-
-UCTurma Gestor::inputUCTurma() {
-    string codUc, codTurma;
-    int pos = -1;
-    while (true) {
-        cin >> codUc;
-        cin >> codTurma;
-        if ((pos = this->getCodigoTurma(codUc, codTurma)) == -1)
-            break;
-        else
-            cout << "Codigo - ";
-    }
-    return this->horario.at(pos);
-}
-
-bool Gestor::pedidoPossivel(const vector <Slot> &newSchedule) {
-    for (int i = 0; i < newSchedule.size() - 1; i++)
-        for (int j = i + 1; j < newSchedule.size(); j++)
-            if (newSchedule.at(i).erro(newSchedule.at(j)))
-                return false;
-    return true;
-}
-
-void Gestor::addUC() {
-    string line;
-    ifstream in("classes_per_uc.csv");
-
-    getline(in, line);
-    while (getline(in, line)) {
-        vector <string> v{destroy(line, ',')};
-        TurmaH ucTurma(v[2], v[3]);
-        this->horario.push_back(ucTurma);
-    }
-}
-
-void Gestor::addHorario() {
-    string line;
-    ifstream in("classes.csv");
-
-    getline(in, line);
-    while (getline(in, line)) {
-        vector <string> v{destroy(line, ',')};
-        int a = getCodigoTurma(v[0], v[1]);
-        DiaSemana dia = Slot::stringToDiaSemana(v[2]);
-        TipoAula tipo = Slot::stringToTipo(v[5]);
-        float hora = stof(v[3]);
-        float duracao = stof(v[4]);
-        Slot slot(dia, hora, duracao, tipo);
-        this->horario[a].addSlot(slot);
-    }
-}
-
-list <Slot> Gestor::getHorariosTurma(UCTurma turma) {
-    return this->horario.at(this->getCodigoTurma(turma.getCodUC(), turma.getCodTurma())).getHorarioUcTurma();
-}
 
 vector <string> destroy(const string &str, const char &b) {
     string value;
@@ -104,59 +30,107 @@ vector <string> destroy(const string &str, const char &b) {
     return a;
 }
 
-void Gestor::addEstudante() {
+int GestorDeHorarios::getCodigoTurma(string codUC, const string &codigoTurma) {
+    for (int i = 0; i < horario.size(); i++) {
+        if (this->horario[i].getCodTurma() == codigoTurma && this->horario[i].getCodUc() == codUC) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+TurmaH GestorDeHorarios::inputUCTurma() {
+    string codUc, codTurma;
+    int pos = -1;
+    while (true) {
+        cin >> codUc;
+        cin >> codTurma;
+        if ((pos = this->getCodigoTurma(codUc, codTurma)) == -1)
+            break;
+        else
+            cout << "Codigo - ";
+    }
+    return this->horario.at(pos);
+}
+
+bool GestorDeHorarios::pedidoPossivel(const vector <Slot> &newSchedule) {
+    for (int i = 0; i < newSchedule.size() - 1; i++)
+        for (int j = i + 1; j < newSchedule.size(); j++)
+            if (newSchedule.at(i).erro(newSchedule.at(j)))
+                return false;
+    return true;
+}
+
+void GestorDeHorarios::addUC() {
     string line;
-    ifstream in("students_classes.csv");
+    ifstream in("classes_per_uc.csv");
 
     getline(in, line);
     while (getline(in, line)) {
         vector <string> v{destroy(line, ',')};
-        Estudante estudante(v[0], v[1]);
-        auto i = this->estudantes.find(estudante);
-        if (i != this->estudantes.end()) {
-            UCTurma ucTurma(v[2], v[3]);
-            i->addUCTurma(ucTurma);
-        } else
-            this->estudantes.insert(estudante);
+        TurmaH ucTurma(v[2], v[3]);
+        this->horario.push_back(ucTurma);
     }
 }
 
-void GestorDeHorarios::processarPedido() {
-    vector <Slot> novoHorario;
-    Pedido novoPedido = this->pedidosHold.front();
-    switch (novoPedido.getTipoPedido()) {
-        case REMOVER:
-            novoPedido.getEstudante().rmUCTurma(novoPedido.getUCDesejadas().at(0));
-            break;
-        case ADICIONAR:
-            size_t pos = this->getCodigoTurma(
-                    novoPedido.getUCDesejadas().at(0).getCodUC(),
-                    novoPedido.getUCDesejadas().at(0).getCodTurma());
+//TODO addHora
+void GestorDeHorarios::addHora() {
 
-            for (auto i: this->horario.at(pos).getHorarioUcTurma())
-                if (i.gettipo() == TP || i.gettipo() == PL)
-                    novoHorario.push_back(i);
-            for (auto i: novoPedido.getEstudante().getTurmas())
-                for (auto j: this->horario.at(this->getCodigoTurma(i.getCodUC(), i.getCodTurma())).getHorarioUcTurma())
-                    if (j.gettipo() == TP || j.gettipo() == PL)
-                        novoHorario.push_back(j);
+}
 
-
-            break;
-        case ALTERAR:
-
-            break;
-        case ALTERARCONJ:
-            break;
-    }
+list <Slot> GestorDeHorarios::getHorariosTurma(UcTurma turma) {
+    return this->horario.at(this->getCodigoTurma(turma.getCodUc(), turma.getCodTurma())).getHorarioUcTurma();
 }
 
 
-vector <Slot> Gestor::newSchedule(const list <UCTurma> &turmas, const vector <UCTurma> &newTurmas) {
+vector<string> reducer(string Line, char& division){
+    string medium;
+
+    vector<string> result;
+    size_t pos;
+    while ((pos = Line.find(division)) != std::string::npos) {
+        string token = Line.substr(0, pos);
+        result.push_back(token);
+        Line.erase(0, pos + 1);
+    }
+    result.push_back(Line);
+    return result;
+}
+void genEstudantes() {
+    string line;
+    ifstream in("students_classes.csv\"");
+    if(in.is_open()) {
+        (getline(in, line));
+        while (getline(in, line)) {
+            char& b = (char& ) ",";
+            vector<string> Students =  reducer(line, b);
+            for(auto c: Students){
+                cout << "1: "<< Students[0] <<endl;// numero
+                cout << "2: "<< Students[1] <<endl;// nome
+                cout << "3: "<< Students[2] <<endl;// uc
+                cout << "4: "<< Students[3] <<endl;// turma
+            }
+
+        }
+    }
+}
+
+TurmaH GestorDeHorarios::getTurmaH(const UcTurma& ucTurma) const{
+    for(auto turma : this->horario)
+        if(turma.getCodUc() == ucTurma.getCodUc() && turma.getCodTurma() == ucTurma.getCodTurma())
+            return turma;
+}
+
+//TODO concluirPedido
+bool GestorDeHorarios::concluirPedido() {
+
+}
+
+
+vector <Slot> GestorDeHorarios::newSchedule(const list <UcTurma> &turmas, const vector <UcTurma> &newTurmas) {
     vector <Slot> novoHorario;
     for (auto turma: turmas) {
 
     }
 
 }
-*/

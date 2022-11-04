@@ -15,17 +15,17 @@ class Pedido;
 
 class Estudante{
 private:
-    int numero;
+    std::basic_string<char> numero;
     std::string nome;
     std::list<UcTurma> turmas;
 public:
-    Estudante(int Numero, std::string Nome);
-    int getNumero() const;
-    void setNumero(int Numero);
+    Estudante(std::string Numero, std::string Nome);
+    std::string getNumero() const;
+    void setNumero(std::string Numero);
     std::string getNome() const;
     void setNome(std::string Nome);
     std::list<UcTurma> getTurmas() const;
-    void addUcTurma(const UcTurma ucTurma);
+    void addUcTurma(const UcTurma ucTurma) const;
     void rmUcTurma(const UcTurma ucTurma);
     bool operator<(const Estudante estudante) const;
     bool operator==(const Estudante estudante) const;

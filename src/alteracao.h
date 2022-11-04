@@ -8,10 +8,10 @@ using namespace std;
 
 class Alteracao {
 private:
-    UcTurma &atual;
-    UcTurma &desejada;
+    UcTurma atual;
+    UcTurma desejada;
 public:
-    Alteracao(UcTurma &atual, UcTurma &desejada);
+    Alteracao(UcTurma atual, UcTurma desejada);
 
     UcTurma getDesejada();
 

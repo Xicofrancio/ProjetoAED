@@ -1,3 +1,4 @@
+
 #ifndef GESTOR_H
 #define GESTOR_H
 
@@ -20,7 +21,7 @@ private:
 public:
     UcTurma inputUCTurma();
 
-    int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
+    int getNumeroEstudante(const string codigoEstudante, const string nomeEstudante);
 
     int getCodigoTurma(string codUC, string codigoTurma);
 
@@ -30,7 +31,7 @@ public:
 
     void addUC();
 
-    void addHora();
+    void addHorario();
 
     void addEstudante();
 
@@ -38,9 +39,9 @@ public:
 
     bool pedidoPossivel(const vector <Slot> newSchedule);
 
-    list <Slot> getHorariosTurma(UCTurma turma);
+    list <Slot> getHorariosTurma(UcTurma turma);
 
-    vector <Slot> newSchedule(const list <UcTurma> turmas, const vector <Ucturma> newturmas);
+    vector <Slot> newSchedule(const list <UcTurma> turmas, const vector <UcTurma> newturmas);
 
 };
 

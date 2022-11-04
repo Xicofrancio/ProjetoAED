@@ -6,11 +6,14 @@
 #include "src/gestordehorarios.h"
 #include "src/turmah.h"
 #include "src/ucturma.h"
-#include "src/cli.cpp"
+#include "src/readFiles.h"
+#include "src/cli.h"
+
 using namespace std;
 
 int main(){
-    helper();
+    cli menu;
+    menu.helper();
     return 0;
 }
 

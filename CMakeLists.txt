@@ -18,6 +18,7 @@ add_executable(Projeto
         src/gestordehorarios.cpp
         src/pedido.cpp
         src/slot.cpp
-        src/turmah.cpp)
+        src/turmah.cpp
+        src/readFiles.cpp)
 
 add_compile_definitions(_GLIBCXX_USE_CXX11_ABI=0)

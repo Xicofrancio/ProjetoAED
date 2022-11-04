@@ -105,6 +105,13 @@ build CMakeFiles/Projeto.dir/src/turmah.cpp.obj: CXX_COMPILER__Projeto_Debug C$:
   OBJECT_DIR = CMakeFiles\Projeto.dir
   OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
 
+build CMakeFiles/Projeto.dir/src/readFiles.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/readFiles.cpp || cmake_object_order_depends_target_Projeto
+  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
+  DEP_FILE = CMakeFiles\Projeto.dir\src\readFiles.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Projeto
@@ -113,7 +120,7 @@ build CMakeFiles/Projeto.dir/src/turmah.cpp.obj: CXX_COMPILER__Projeto_Debug C$:
 #############################################
 # Link the executable Projeto.exe
 
-build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/main.cpp.obj CMakeFiles/Projeto.dir/src/ucturma.cpp.obj CMakeFiles/Projeto.dir/src/cli.cpp.obj CMakeFiles/Projeto.dir/src/estudante.cpp.obj CMakeFiles/Projeto.dir/src/gestordehorarios.cpp.obj CMakeFiles/Projeto.dir/src/pedido.cpp.obj CMakeFiles/Projeto.dir/src/slot.cpp.obj CMakeFiles/Projeto.dir/src/turmah.cpp.obj
+build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/main.cpp.obj CMakeFiles/Projeto.dir/src/ucturma.cpp.obj CMakeFiles/Projeto.dir/src/cli.cpp.obj CMakeFiles/Projeto.dir/src/estudante.cpp.obj CMakeFiles/Projeto.dir/src/gestordehorarios.cpp.obj CMakeFiles/Projeto.dir/src/pedido.cpp.obj CMakeFiles/Projeto.dir/src/slot.cpp.obj CMakeFiles/Projeto.dir/src/turmah.cpp.obj CMakeFiles/Projeto.dir/src/readFiles.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Projeto.dir

@@ -1,5 +1,6 @@
+/*
 #include <iostream>
-#include "Gestor.h"
+#include "gestordehorarios.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,22 +10,24 @@
 using namespace std;
 
 
-void Gestor::salvarPedido(const Pedido pedido) {
+void GestorDeHorarios::salvarPedido(const Pedido &pedido) {
     this->pedidosHold.push(pedido);
 }
 
-int Gestor::getNumeroEstudante(string codigoEstudante,string nomeEstudante) {
-    for (int i = 0; i < this->estudantes.size(); i++) {
-        if (this->estudantes[i].getCodTurma() == codEst && this->estudantes[i].getCodUC() == nomeEst) {
-            return i;
+
+
+int GestorDeHorarios::getNumeroEstudante(const std::string codigoEstudante, const std::string nomeEstudante) {
+    for (auto f: estudante) {
+        if (to_string(f.getNumero()) == codigoEstudante &&  f.getNome() == nomeEstudante) {
+            return f.getNumero();
         }
     }
 }
 
-int Gestor::getCodigoTurma(string codUC, const string &codigoTurma) {
-    for (int i = 0; i < horario.size(); i++) {
-        if (this->horario[i].getCodTurma() == codTurma && this->horario[i].getCodUC() == codUC) {
-            return i;
+int GestorDeHorarios::getCodigoTurma(const string codUC, const string codigoTurma) {
+    for(auto f : horario){
+        if(f.getCodTurma() == codigoTurma && f.getCodUc() == codUC){
+            return f;
         }
     }
     return -1;
@@ -156,3 +159,4 @@ vector <Slot> Gestor::newSchedule(const list <UCTurma> &turmas, const vector <UC
     }
 
 }
+*/

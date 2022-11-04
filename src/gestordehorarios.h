@@ -22,7 +22,6 @@ public:
 
     int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
 
-    int getCodigoTurma(string codUC, string codigoTurma);
 
     void concluirPedido();
 
@@ -36,12 +35,13 @@ public:
 
     void novoEstudante();
 
-    bool pedidoPossivel(const vector <Slot> newSchedule);
-
-    list <Slot> getHorariosTurma(UCTurma turma);
+    list <Slot> getHorariosTurma(UcTurma turma);
 
     vector <Slot> newSchedule(const list <UcTurma> turmas, const vector <Ucturma> newturmas);
 
+    int getCodigoTurma(string codUC, const string &codigoTurma);
+
+    bool pedidoPossivel(const vector<Slot> &newSchedule);
 };
 
 

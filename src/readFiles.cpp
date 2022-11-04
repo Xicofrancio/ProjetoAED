@@ -40,6 +40,7 @@ void readFiles::genEtudantes() {
                     Estudante estudante(l,s);
                     cout << estudante.getNome() << endl;
                     cout << estudante.getNumero() << endl;
+                    estudantes.insert(estudante);
                 }else{
 
                 }
@@ -52,38 +53,51 @@ void readFiles::genEtudantes() {
 
 void readFiles::genHorarios(){
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes.csv");
+    ifstream in("C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\csv\classes.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
             char& b = (char& ) ",";
             vector<string> Horarios =  reducer(line, b);
             for(auto c: Horarios){
-                cout << "1: "<< Horarios[0] <<endl;// turma
-                cout << "2: "<< Horarios[1] <<endl;// numero
-                cout << "3: "<< Horarios[2] <<endl;// dia
-                cout << "4: "<< Horarios[3] <<endl;// hora incial
-                cout << "5: " << Horarios[4]<< endl;// duraÃ§ao
-                cout << "6: "<< Horarios[5]<<endl;// tipo
+                string day = Horarios[2];
+                string type = Horarios[5];
+                float initial = stoi(Horarios[3]);
+                float duracao = stoi(Horarios[4]);
+                float final = initial + duracao;
+                string uc = Horarios[1];
+                string turma = Horarios[0];
+                UcTurma ucTurma(uc, turma);
+                Slot slot(day, initial, final, type, duracao, ucTurma);
+                cout <<  slot.getDia() <<endl;// turma
+                cout << slot.getHoraInicio() <<endl;// numero
+                cout << slot.getDuracao()<<endl;// dia
+                cout << slot.getHoraFim() <<endl;// hora incial
+                cout << slot.getTipo()<< endl;// duraÃ§ao
+                cout<<"turma: " << slot.getUCTurma().getCodTurma()<<". uc:" <<slot.getUCTurma().getCodUc()<<"."<<endl;// tipo
+                horarios.push_back(slot);
             }
 
         }
     }
 }
-
 void readFiles::genUC() {
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
+    ifstream in("C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\csv\classes_per_uc.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
             char& b = (char& ) ",";
-            vector<string> Turmas =  reducer(line, b);
-            for(auto c: Turmas){
-                cout << "1: "<< Turmas[0] <<endl;// uc
-                cout << "2: "<< Turmas[1] <<endl;// Turma
+            vector<string> UC =  reducer(line, b);
+            for(auto c: UC){
+                string l = UC[0];
+                string s = UC[1];
+                UcTurma ucTurma(l,s);
+                cout << ucTurma.getCodTurma() << endl;
+                cout << ucTurma.getCodUc() << endl;
+                ucturmas.push_back(ucTurma);
             }
-
         }
+
     }
 }

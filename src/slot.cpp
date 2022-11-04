@@ -3,13 +3,12 @@
 //
 
 #include "estudante.h"
-#include "gestordehorarios.h"
 #include "pedido.h"
 #include "slot.h"
 #include "turmah.h"
 #include "ucturma.h"
 
-Slot::Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float Duracao) {dia = Dia; horaInicio = HoraInicio; horaFim = HoraFim; tipo = Tipo; duracao = Duracao;}
+Slot::Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float Duracao, UcTurma ucTurma) {dia = Dia; horaInicio = HoraInicio; horaFim = HoraFim; tipo = Tipo; duracao = Duracao; ucturma = ucTurma;}
 
 std::string Slot::getDia() const{return dia;}
 
@@ -43,6 +42,9 @@ bool Slot::erro(Slot slot) const {
     else{return horaInicio < slot.horaFim;}
 
 }
+void Slot::setUCTurma(UcTurma ucTurma) {ucturma = ucTurma;}
+
+UcTurma Slot::getUCTurma() const {return ucturma;}
 
 Slot::Slot(){
     dia = "Monday";

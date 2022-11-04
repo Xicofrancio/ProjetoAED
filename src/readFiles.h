@@ -11,9 +11,10 @@
 
 
 class readFiles {
-    std::vector<TurmaH> horarios;
+private:
+    std::vector<Slot> horarios;
     std::set<Estudante> estudantes;
-
+    std::vector<UcTurma> ucturmas;
 public:
     void genEtudantes();
     void genHorarios();

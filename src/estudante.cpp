@@ -8,9 +8,9 @@
 
 using namespace std;
 
-Estudante::Estudante(string Numero, std::string Nome) {numero= Numero; nome = Nome;};
+Estudante::Estudante(int Numero, std::string Nome) {numero= Numero; nome = Nome;}
 
-string Estudante::getNumero() const{return numero;};
+int Estudante::getNumero() const{return numero;}
 
 void Estudante::setNumero(string Numero) {numero = Numero;};
 

@@ -9,11 +9,11 @@
 using namespace std;
 
 
-void Gestor::salvarPedido(const Pedido &pedido) {
+void Gestor::salvarPedido(const Pedido pedido) {
     this->pedidosHold.push(pedido);
 }
 
-int Gestor::getNumeroEstudante(const string &codigoEstudante, const string &nomeEstudante) {
+int Gestor::getNumeroEstudante(string codigoEstudante,string nomeEstudante) {
     for (int i = 0; i < this->estudantes.size(); i++) {
         if (this->estudantes[i].getCodTurma() == codEst && this->estudantes[i].getCodUC() == nomeEst) {
             return i;
@@ -21,7 +21,7 @@ int Gestor::getNumeroEstudante(const string &codigoEstudante, const string &nome
     }
 }
 
-int Gestor::getCodigoTurma(const string &codUC, const string &codigoTurma) {
+int Gestor::getCodigoTurma(string codUC, const string &codigoTurma) {
     for (int i = 0; i < horario.size(); i++) {
         if (this->horario[i].getCodTurma() == codTurma && this->horario[i].getCodUC() == codUC) {
             return i;

@@ -1,4 +1,4 @@
-//
+    //
 // Created by USER on 28/10/2022.
 //
 
@@ -13,10 +13,10 @@ private:
     std::string tipo;
     float duracao;
 public:
-    std::string getDia() const;
-    void setDia(std::string Dia);
-    float getHoraInicio() const;
-    void setHoraInicio(float HoraInicio);
+    std::string getDia() const; // retorna o dia da aula
+    void setDia(std::string Dia); // define o dia da aula
+    float getHoraInicio() const; // retorna hora inicial em float
+    void setHoraInicio(float HoraInicio); // define hora inicial em float
     float getHoraFim() const;
     void setHoraFim(float HoraFim);
     void setDuracao(float Duracao);

@@ -26,7 +26,7 @@ public:
 
     void concluirPedido();
 
-    void salvarPedido(const Pedido &pedido);
+    void salvarPedido(const Pedido pedido);
 
     void addUC();
 

@@ -10,6 +10,10 @@ using namespace std;
 #include "ucturma.h"
 
 void helper(){
+    Gestor gestorfeup;
+    gestorfeup.addEstudante();
+    gestorfeup.addHorario();
+    gestorfeup.addUC();
     cout<<"Que operação quer executar?"<<endl<< "1) fazer um pedido (alteração de horario)" << "2) visualizar horário,turma e uc"<<endl;
     int n;
     int i;
@@ -20,8 +24,8 @@ void helper(){
         cin >> i;
         cout << "Troca pretendida:" << endl;
         cin >> Tipo;
-        for (auto c: ) {
-            if (c.numero == i) {
+        for (auto c: gestorfeup) {
+            if (c.getNumeroEstudante() == i) {
                 Pedido pedido(c, Tipo);
             }
         }

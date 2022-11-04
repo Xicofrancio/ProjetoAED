@@ -15,8 +15,8 @@ std::string TurmaH::getCodTurma() const{return codTurma;}
 
 std::string TurmaH::getCodUc() const{return codUc;}
 
-std::list<Slot> TurmaH::getHorarioUcTurma() const{return horarioUcTurma;}
+std::list<Slot> TurmaH::getHorarioUcTurma() const{return horariosUcTurma;}
 
 int TurmaH::get_num_estudantes() {return num_estudantes;}
 
-void TurmaH::addHorarioUcTurma(Slot SlotUcTurma) {horarioUcTurma.push_back(SlotUcTurma);}
+void TurmaH::addHorarioUcTurma(Slot SlotUcTurma) {horariosUcTurma.push_back(SlotUcTurma);}

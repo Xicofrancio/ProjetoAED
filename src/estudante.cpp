@@ -25,7 +25,7 @@ void  Estudante::addUcTurma(const UcTurma ucTurma){
 }
 
 void Estudante::rmUcTurma(const UcTurma ucTurma) {
-    for(auto c = this ->turmas.begin(); c != this->turmas.end();c++){
+    for(auto c = turmas.begin(); c != turmas.end();c++){
         if (c->operator==(ucTurma)) {
             turmas.erase(c);
             break;

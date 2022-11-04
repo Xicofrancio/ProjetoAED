@@ -18,7 +18,7 @@ private:
     vector <TurmaH> horario;
     queue <Pedido> pedidosHold;
 public:
-    UcTurma inputUCTurma();
+    TurmaH inputUCTurma();
 
     int getNumeroEstudante(string codigoEstudante, string nomeEstudante);
 
@@ -35,13 +35,15 @@ public:
 
     void novoEstudante();
 
-    list <Slot> getHorariosTurma(UcTurma turma);
+    TurmaH getTurmaH(const UcTurma& ucTurma) const;
 
-    vector <Slot> newSchedule(const list <UcTurma> turmas, const vector <Ucturma> newturmas);
+    list <Slot> getHorariosTurma(UcTurma turma);
 
     int getCodigoTurma(string codUC, const string &codigoTurma);
 
     bool pedidoPossivel(const vector<Slot> &newSchedule);
+
+    vector<Slot> newSchedule(const list<UcTurma> &turmas, const vector<UcTurma> &newTurmas);
 };
 
 

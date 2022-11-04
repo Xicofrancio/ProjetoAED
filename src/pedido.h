@@ -4,6 +4,9 @@
 #ifndef PEDIDO_H
 #define PEDIDO_H
 #include "estudante.h"
+
+enum TipoPedido{ADD,REM,ALT,ALTC};
+
 class Pedido{
 private:
     std::string tipo;

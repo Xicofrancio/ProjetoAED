@@ -13,13 +13,6 @@ void GestorDeHorarios::salvarPedido(const Pedido pedido) {
     this->pedidosHold.push(pedido);
 }
 
-int GestorDeHorarios::getNumeroEstudante(string codigoEstudante,string nomeEstudante) {
-    for (int i = 0; i < this->estudante.size(); i++) {
-        if (this->estudante[i].getCodTurma() == codigoEstudante && this->estudante[i].getCodUc() == nomeEstudante) {
-            return i;
-        }
-    }
-}
 
 vector <string> destroy(const string &str, const char &b) {
     string value;
@@ -46,7 +39,7 @@ int GestorDeHorarios::getCodigoTurma(string codUC, const string &codigoTurma) {
     return -1;
 }
 
-UcTurma GestorDeHorarios::inputUCTurma() {
+TurmaH GestorDeHorarios::inputUCTurma() {
     string codUc, codTurma;
     int pos = -1;
     while (true) {
@@ -80,21 +73,9 @@ void GestorDeHorarios::addUC() {
     }
 }
 
+//TODO addHora
 void GestorDeHorarios::addHora() {
-    string line;
-    ifstream in("classes.csv");
 
-    getline(in, line);
-    while (getline(in, line)) {
-        vector <string> v{destroy(line, ',')};
-        int a = getCodigoTurma(v[0], v[1]);
-        DiaSemana dia = Slot::stringToDiaSemana(v[2]);
-        TipoAula tipo = Slot::stringToTipo(v[5]);
-        float hora = stof(v[3]);
-        float duracao = stof(v[4]);
-        Slot slot(dia, hora, duracao, tipo);
-        this->horario[a].addHorarioUcTurma(slot);
-    }
 }
 
 list <Slot> GestorDeHorarios::getHorariosTurma(UcTurma turma) {
@@ -134,33 +115,15 @@ void genEstudantes() {
     }
 }
 
+TurmaH GestorDeHorarios::getTurmaH(const UcTurma& ucTurma) const{
+    for(auto turma : this->horario)
+        if(turma.getCodUc() == ucTurma.getCodUc() && turma.getCodTurma() == ucTurma.getCodTurma())
+            return turma;
+}
 
+//TODO concluirPedido
 bool GestorDeHorarios::concluirPedido() {
-    if(this->pedidosHold.empty()) return false;
-    Pedido pedidoAtual = this->pedidosHold.front();
-    this->pedidosHold.pop();
-    vector<Slot> novoHorario;
-    switch (pedidoAtual.getTipoPedido()) {
-        case REMOVER:
-            pedidoAtual.getEstudante().rmUcTurma(pedidoAtual.getUcDesejadas().at(0));
-            this->getTurmaH(pedidoAtual.getUcDesejadas().at(0)).operator--();
-            return true;
-        case ADICIONAR:
-        case ALTERAR:
-        case ALTERARCONJ:
-            if(checkDisponibilidadeTurmas(pedidoAtual.getUCDesejadas(),
-                                          pedidoAtual.getTipoPedido(),
-                                          pedidoAtual.getEstudante())
-               && Gestor::compativel(this->novoHorario(pedidoAtual.getEstudante().getTurmas(),
-                                                       pedidoAtual.getUCDesejadas()))){
-                this->switchTurmasEstudante(pedidoAtual.getEstudante(),pedidoAtual.getUCDesejadas());
-                return true;
-            }else {
-                this->pedidosRejeitados.push_back(pedidoAtual);
-                return false;
-            }
-    }
-    return false;
+
 }
 
 

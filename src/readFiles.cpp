@@ -121,10 +121,10 @@ void readFiles::getHorarioEstudante(int numero_estudante) {
 
 
 void readFiles::getHorarioEstudanteDia(int numero, string dia){
-    for(auto c: estudantes){
+    for(auto c : estudantes){
         if(c.getNumero()==numero){
-            for(auto d: c.getTurmas()){
-                for(auto j: horarios){
+            for(auto &d: c.getTurmas()){
+                for(auto &j: horarios){
                     if(d.operator==(j.getUCTurma())) {
                         if (dia == j.getDia()) {
                             cout << "Uc: " << j.getUCTurma().getCodUc()<<". Turma: " << j.getUCTurma().getCodTurma()<< ". Day: " << j.getDia() << ". Hora inicial: "<< j.getHoraInicio() << ". Hora final: " << j.getHoraFim() << ". Duraçao: "<< j.getDuracao() << ". Tipo: " << j.getTipo() << "." << endl;

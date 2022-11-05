@@ -3,7 +3,6 @@
 //
 
 #include "estudante.h"
-#include "pedido.h"
 #include "slot.h"
 #include "turmah.h"
 #include "ucturma.h"

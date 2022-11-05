@@ -19,6 +19,8 @@ public:
     void genEtudantes();
     void genHorarios();
     void genUC();
+    void getHorarioEstudante(int numero_estudante);
+    void getHorarioEstudanteDia(int numero, std::string dia);
     std::vector<std::string> reducer(std::string Line, char& division);
 };
 

@@ -16,7 +16,11 @@ void UcTurma::setCodTurma(std::string CodTurma) {codTurma = CodTurma;}
 
 void UcTurma::setCodUc(std::string CodUc) {codUc = CodUc;}
 
-bool UcTurma::operator==(const UcTurma ucTurma) const { codUc == ucTurma.codUc && codTurma == ucTurma.codTurma;}
+bool UcTurma::operator==(const UcTurma ucTurma) const {
+    bool g = false;
+    if( codUc == ucTurma.codUc && codTurma == ucTurma.codTurma) g= true;
+    return g;
+}
 
 UcTurma::UcTurma() {
     codTurma = "";

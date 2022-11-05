@@ -19,4 +19,6 @@ std::list<Slot> TurmaH::getHorarioUcTurma() const{return horariosUcTurma;}
 
 int TurmaH::get_num_estudantes() {return num_estudantes;}
 
+void TurmaH:: addEstudante(){num_estudantes++;}
+
 void TurmaH::addHorarioUcTurma(Slot SlotUcTurma) {horariosUcTurma.push_back(SlotUcTurma);}

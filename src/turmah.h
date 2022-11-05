@@ -17,6 +17,7 @@ public:
     std::string getCodTurma() const; // retorna codigo da Turma
     std::list<Slot> getHorarioUcTurma() const; // retorna o horario da turma
     void addHorarioUcTurma(Slot HorarioUcTurma);// adiciona um horario de uma Uc a turma
+    void addEstudante();
     TurmaH(std::string CodUc, std::string CodTurma);//construtor da turma
     int get_num_estudantes();// retorna o numero de estudantes
 };

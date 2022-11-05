@@ -1,0 +1,42 @@
+\hypertarget{slot_8h_source}{}\doxysection{slot.\+h}
+\label{slot_8h_source}\index{C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/src/slot.h@{C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/src/slot.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1     \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by USER on 28/10/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ucturma.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SLOT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SLOT\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_slot}{Slot}}\{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     std::string dia;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{float} horaInicio;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{float} horaFim;}
+\DoxyCodeLine{13     std::string tipo;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{float} duracao;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_uc_turma}{UcTurma}} ucturma;}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     std::string getDia() \textcolor{keyword}{const}; \textcolor{comment}{// retorna o dia da aula}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} setDia(std::string Dia); \textcolor{comment}{// define o dia da aula}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{float} getHoraInicio() \textcolor{keyword}{const}; \textcolor{comment}{// retorna hora inicial em float}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} setHoraInicio(\textcolor{keywordtype}{float} HoraInicio); \textcolor{comment}{// define hora inicial em float}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{float} getHoraFim() \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} setHoraFim(\textcolor{keywordtype}{float} HoraFim);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} setDuracao(\textcolor{keywordtype}{float} Duracao);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{float} getDuracao() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_uc_turma}{UcTurma}} getUCTurma()\textcolor{keyword}{const};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} setUCTurma(\mbox{\hyperlink{class_uc_turma}{UcTurma}} ucTurma);}
+\DoxyCodeLine{27     std::string getTipo() \textcolor{keyword}{const};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} setTipo(std::string Tipo);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_slot}{Slot}}(std::string Dia, \textcolor{keywordtype}{float} HoraInicio, \textcolor{keywordtype}{float} HoraFim, std::string Tipo,\textcolor{keywordtype}{float} Duracao, \mbox{\hyperlink{class_uc_turma}{UcTurma}} ucTurma);}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_slot}{Slot}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} erro(\mbox{\hyperlink{class_slot}{Slot}} slot)\textcolor{keyword}{const};}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//SLOT\_H}}
+
+\end{DoxyCode}

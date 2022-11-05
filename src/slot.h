@@ -14,6 +14,7 @@ private:
     float duracao;
     UcTurma ucturma;
 public:
+
     std::string getDia() const; // retorna o dia da aula
     void setDia(std::string Dia); // define o dia da aula
     float getHoraInicio() const; // retorna hora inicial em float

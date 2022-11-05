@@ -1,0 +1,31 @@
+\hypertarget{pedido_8h_source}{}\doxysection{pedido.\+h}
+\label{pedido_8h_source}\index{C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/src/pedido.h@{C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/src/pedido.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by USER on 28/10/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef PEDIDO\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define PEDIDO\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}estudante.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{enum} TipoPedido\{ADD,REM,ALT,ALTC\};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_pedido}{Pedido}}\{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     std::string tipo;}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_estudante}{Estudante}} estudante;}
+\DoxyCodeLine{14     std::vector<UcTurma> UcTurmaDesejadas;}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_pedido}{Pedido}}( \mbox{\hyperlink{class_estudante}{Estudante}} Estudante1, std::string Tipo);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_estudante}{Estudante}} getEstudante();}
+\DoxyCodeLine{18     std::vector<UcTurma> getUcDesejadas();}
+\DoxyCodeLine{19     std::string getTipoPedido();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} setEstudante(\textcolor{keyword}{const} \mbox{\hyperlink{class_estudante}{Estudante}} Estudante1);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} addUcDesejada(\textcolor{keyword}{const} \mbox{\hyperlink{class_uc_turma}{UcTurma}} UcTurmaDesejada);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} setTipoPedido(std::string tipo);}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PEDIDO\_H}}
+
+\end{DoxyCode}

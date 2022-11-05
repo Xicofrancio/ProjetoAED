@@ -6,6 +6,7 @@
 #include <vector>
 #include "readFiles.h"
 #include "estudante.h"
+#include "slot.h"
 using namespace std;
 
 
@@ -41,12 +42,12 @@ void readFiles::genHorarios(){
                 string turma = Horarios[0];
                 UcTurma ucTurma(uc, turma);
                 Slot slot(day, initial, final, type, duracao, ucTurma);
-                cout <<  slot.getDia() <<endl;// turma
-                cout << slot.getHoraInicio() <<endl;// numero
-                cout << slot.getDuracao()<<endl;// dia
-                cout << slot.getHoraFim() <<endl;// hora incial
-                cout << slot.getTipo()<< endl;// duraÃ§ao
-                cout<<"turma: " << slot.getUCTurma().getCodTurma()<<". uc:" <<slot.getUCTurma().getCodUc()<<"."<<endl;// tipo
+                //cout <<  slot.getDia() <<endl;// turma
+                //cout << slot.getHoraInicio() <<endl;// numero
+                //cout << slot.getDuracao()<<endl;// dia
+                //cout << slot.getHoraFim() <<endl;// hora incial
+                //cout << slot.getTipo()<< endl;// duraÃ§ao
+                //cout<<"turma: " << slot.getUCTurma().getCodTurma()<<". uc:" <<slot.getUCTurma().getCodUc()<<"."<<endl;// tipo
                 horarios.push_back(slot);
             }
 
@@ -66,8 +67,6 @@ void readFiles::genUC(){
                 string l = UC[0];
                 string s = UC[1];
                 UcTurma ucTurma(l,s);
-                cout << ucTurma.getCodTurma() << endl;
-                cout << ucTurma.getCodUc() << endl;
                 ucturmas.push_back(ucTurma);
             }
         }
@@ -95,8 +94,6 @@ void readFiles::genEtudantes() {
                     int l = stoi(Students[0]);
                     string s = Students[1];
                     Estudante estudante(l, s);
-                    cout << estudante.getNome() << endl;
-                    cout << estudante.getNumero() << endl;
                     estudantes.insert(estudante);
                 }
             }
@@ -108,6 +105,30 @@ void readFiles::genEtudantes() {
                         UcTurma ucTurma(j, l);
                         d.addUcTurma(ucTurma);
 
+                    }
+                }
+            }
+        }
+    }
+}
+
+void readFiles::getHorarioEstudante(int numero_estudante) {
+    getHorarioEstudanteDia(numero_estudante, "Monday");
+    getHorarioEstudanteDia(numero_estudante, "Tuesday");
+    getHorarioEstudanteDia(numero_estudante, "Wednesday");
+    getHorarioEstudanteDia(numero_estudante, "Thursday");
+    getHorarioEstudanteDia(numero_estudante, "Friday");
+}
+
+void readFiles::getHorarioEstudanteDia(int numero, string dia){
+    for(auto c : estudantes){
+        if(c.getNumero()==numero){
+            for(auto &d: c.getTurmas()){
+                for(auto &j: horarios){
+                    if(d.getCodTurma()==j.getUCTurma().getCodTurma() && d.getCodUc() == j.getUCTurma().getCodUc()) {
+                        if (dia == j.getDia()) {
+                            cout << "Uc: " << j.getUCTurma().getCodUc()<<". Turma: " << j.getUCTurma().getCodTurma()<< ". Day: " << j.getDia() << ". Hora inicial: "<< j.getHoraInicio() << ". Hora final: " << j.getHoraFim() << ". Duraçao: "<< j.getDuracao() << ". Tipo: " << j.getTipo() << "." << endl;
+                        }
                     }
                 }
             }

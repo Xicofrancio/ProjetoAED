@@ -55,8 +55,7 @@ void readFiles::genHorarios(){
 }
 
 void readFiles::genUC(){
-    string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
+    string line;ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -73,8 +72,6 @@ void readFiles::genUC(){
         }
     }
 }
-
-
 
 
 
@@ -108,6 +105,30 @@ void readFiles::genEtudantes() {
                         UcTurma ucTurma(j, l);
                         d.addUcTurma(ucTurma);
 
+                    }
+                }
+            }
+        }
+    }
+}
+void readFiles::getHorarioEstudante(int numero_estudante) {
+    getHorarioEstudanteDia(numero_estudante, "Monday");
+    getHorarioEstudanteDia(numero_estudante, "Tuesday");
+    getHorarioEstudanteDia(numero_estudante, "Wednesday");
+    getHorarioEstudanteDia(numero_estudante, "Thursday");
+    getHorarioEstudanteDia(numero_estudante, "Friday");
+}
+
+
+void readFiles::getHorarioEstudanteDia(int numero, string dia){
+    for(auto c: estudantes){
+        if(c.getNumero()==numero){
+            for(auto d: c.getTurmas()){
+                for(auto j: horarios){
+                    if(d.operator==(j.getUCTurma())) {
+                        if (dia == j.getDia()) {
+                            cout << "Uc: " << j.getUCTurma().getCodUc()<<". Turma: " << j.getUCTurma().getCodTurma()<< ". Day: " << j.getDia() << ". Hora inicial: "<< j.getHoraInicio() << ". Hora final: " << j.getHoraFim() << ". Duraçao: "<< j.getDuracao() << ". Tipo: " << j.getTipo() << "." << endl;
+                        }
                     }
                 }
             }

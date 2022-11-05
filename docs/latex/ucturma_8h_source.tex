@@ -1,0 +1,29 @@
+\hypertarget{ucturma_8h_source}{}\doxysection{ucturma.\+h}
+\label{ucturma_8h_source}\index{C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/src/ucturma.h@{C:/Users/USER/Desktop/Universidade/2ano/Algoritmos e estrutura de dados/Fim/src/ucturma.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by USER on 28/10/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef UCTURMA\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define UCTURMA\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_uc_turma}{UcTurma}}\{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     std::string codUc;}
+\DoxyCodeLine{11     std::string codTurma;}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keyword}{static} \textcolor{keywordtype}{int} num\_max\_estudantes;}
+\DoxyCodeLine{14     std::string getCodUc() \textcolor{keyword}{const}; \textcolor{comment}{// retorna codigo da UC}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} setCodUc(std::string CodUc);\textcolor{comment}{// define o codigo da Uc}}
+\DoxyCodeLine{16     std::string getCodTurma() \textcolor{keyword}{const}; \textcolor{comment}{// retorna o CodTurma}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} setCodTurma(std::string CodTurma); \textcolor{comment}{// define o CodTurma}}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_uc_turma}{UcTurma}}(std::string CodUc, std::string CodTurma); \textcolor{comment}{// construtor de turma}}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_uc_turma}{UcTurma}}(); \textcolor{comment}{// default construtor da turma}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} operator==(\textcolor{keyword}{const} \mbox{\hyperlink{class_uc_turma}{UcTurma}} ucTurma) \textcolor{keyword}{const}; \textcolor{comment}{// comparador de UcTurma}}
+\DoxyCodeLine{21 \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UCTURMA\_H}}
+
+\end{DoxyCode}

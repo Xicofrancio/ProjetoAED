@@ -8,6 +8,9 @@ class cli{
 private:
 
 public:
+    /*!
+     * Menu principal de controlo do programa
+     */
     void helper();
 };
 #endif //FIM_CLI_H

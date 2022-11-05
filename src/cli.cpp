@@ -27,28 +27,42 @@ void cli::helper(){
     std::string Tipo;
     cin >> n;
     while(n != 0) {
-        switch (n) {
+        if (n == 1) {
 
-            case 1:
-                int p;
-                cout << "1) Carregar classes.csv" << endl << "2) Carregar classes_per_uc.csv" << endl << "3) Carregar students_classes.csv" << endl << "4) Voltar" << endl;
-                cin >> p;
-                switch (p) {
-                    case 1:
-                        estudantes.genHorarios();
-                        break;
-
-                    case 2:
-                        estudantes.genUC();
-                        break;
-                    case 3:
-                        estudantes.genEtudantes();
-                        break;
-                    case 4:
-                        goto exit_loop;
-                }
-
+            int p;
+            cout << "1) Carregar classes.csv" << endl << "2) Carregar classes_per_uc.csv" << endl
+                 << "3) Carregar students_classes.csv" << endl << "4) Voltar" << endl;
+            cin >> p;
+            switch (p) {
+                case 1:
+                    estudantes.genHorarios();
+                    break;
+                case 2:
+                    estudantes.genUC();
+                    break;
+                case 3:
+                    estudantes.genEtudantes();
+                    break;
+                case 4:
+                    goto exit_loop;
+            }
+        } else if (n == 2) {
+            int l;
+            cout << "1) Visualizar horarios" ;
+            cin >> l;
+            switch (l) {
+                case 1:
+                    estudantes.getHorarioEstudante(202028547);
+            }
         }
+    }
+}
+
+
+
+
+
+
         /*
         if (n == 10) {
             cout << "Número do aluno:" << endl;
@@ -68,7 +82,7 @@ void cli::helper(){
             for (auto c:) {
                 if (i ==)
             }*/
-        }
 
-    }
+
+
 

@@ -1,0 +1,64 @@
+\hypertarget{class_gestor_de_horarios}{}\doxysection{Gestor\+De\+Horarios Class Reference}
+\label{class_gestor_de_horarios}\index{GestorDeHorarios@{GestorDeHorarios}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_acff2f9177a23113c01c279f2122e2c79}\label{class_gestor_de_horarios_acff2f9177a23113c01c279f2122e2c79}} 
+\mbox{\hyperlink{class_turma_h}{TurmaH}} {\bfseries input\+UCTurma} ()
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_ab1befcd5d59434fec7bce576667d2dd9}\label{class_gestor_de_horarios_ab1befcd5d59434fec7bce576667d2dd9}} 
+int {\bfseries get\+Numero\+Estudante} (string codigo\+Estudante, string nome\+Estudante)
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a5d110ed3356c061c24bb58b1afa9d86e}\label{class_gestor_de_horarios_a5d110ed3356c061c24bb58b1afa9d86e}} 
+bool {\bfseries concluir\+Pedido} ()
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a8092c8a874a13aa61979f7efbfddcc3f}\label{class_gestor_de_horarios_a8092c8a874a13aa61979f7efbfddcc3f}} 
+void {\bfseries salvar\+Pedido} (const \mbox{\hyperlink{class_pedido}{Pedido}} pedido)
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_af6f7e25a462bd78ab6ef06af26e02204}\label{class_gestor_de_horarios_af6f7e25a462bd78ab6ef06af26e02204}} 
+void {\bfseries add\+UC} ()
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_ad3801a50ae8fb076b672a30218874a33}\label{class_gestor_de_horarios_ad3801a50ae8fb076b672a30218874a33}} 
+void {\bfseries add\+Hora} ()
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a2007769af547e23086439da7fabf8122}\label{class_gestor_de_horarios_a2007769af547e23086439da7fabf8122}} 
+void {\bfseries add\+Estudante} ()
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_ab3b2bbeb796ef6ca56ae5765a798f8f6}\label{class_gestor_de_horarios_ab3b2bbeb796ef6ca56ae5765a798f8f6}} 
+void {\bfseries novo\+Estudante} ()
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_ac2b204bf81cbeb67f571e53386bdceba}\label{class_gestor_de_horarios_ac2b204bf81cbeb67f571e53386bdceba}} 
+\mbox{\hyperlink{class_turma_h}{TurmaH}} {\bfseries get\+TurmaH} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&uc\+Turma) const
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_adc4c4acf949fa4b2f91013312fd21331}\label{class_gestor_de_horarios_adc4c4acf949fa4b2f91013312fd21331}} 
+list$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ {\bfseries get\+Horarios\+Turma} (\mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} turma)
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a41069e7e0b1ef701a0bc91240a7d3e45}\label{class_gestor_de_horarios_a41069e7e0b1ef701a0bc91240a7d3e45}} 
+int {\bfseries get\+Codigo\+Turma} (string cod\+UC, const string \&codigo\+Turma)
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_acd07de082c6785098e279693ef03e1ff}\label{class_gestor_de_horarios_acd07de082c6785098e279693ef03e1ff}} 
+bool {\bfseries pedido\+Possivel} (const vector$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ \&new\+Schedule)
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a3f0c4968985d73159dcb12218061f583}\label{class_gestor_de_horarios_a3f0c4968985d73159dcb12218061f583}} 
+vector$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ {\bfseries new\+Schedule} (const list$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ \&turmas, const vector$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ \&new\+Turmas)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a011e724b6f6d35d427e04257e60db511}\label{class_gestor_de_horarios_a011e724b6f6d35d427e04257e60db511}} 
+set$<$ \mbox{\hyperlink{class_estudante}{Estudante}} $>$ {\bfseries estudante}
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a9de63456810c7cf9456fb1770ffca86e}\label{class_gestor_de_horarios_a9de63456810c7cf9456fb1770ffca86e}} 
+vector$<$ \mbox{\hyperlink{class_pedido}{Pedido}} $>$ {\bfseries pedidos\+Rejeitados}
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_a4024004c8836b2a506355a1270e2ecfd}\label{class_gestor_de_horarios_a4024004c8836b2a506355a1270e2ecfd}} 
+vector$<$ \mbox{\hyperlink{class_turma_h}{TurmaH}} $>$ {\bfseries horario}
+\item 
+\mbox{\Hypertarget{class_gestor_de_horarios_aa7816da8d054c9a0520c12a8592e1340}\label{class_gestor_de_horarios_aa7816da8d054c9a0520c12a8592e1340}} 
+queue$<$ \mbox{\hyperlink{class_pedido}{Pedido}} $>$ {\bfseries pedidos\+Hold}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+USER/\+Desktop/\+Universidade/2ano/\+Algoritmos e estrutura de dados/\+Fim/src/gestordehorarios.\+h\end{DoxyCompactItemize}

@@ -4,7 +4,7 @@
 #include "ucturma.h"
 #ifndef SLOT_H
 #define SLOT_H
-#include <iostream>
+
 class Slot{
 private:
     std::string dia;

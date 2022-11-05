@@ -15,11 +15,13 @@ using namespace std;
 
 void cli::helper(){
     readFiles estudantes;
+
     /*GestorDeHorarios gestorfeup;
     gestorfeup.addEstudante();
     gestorfeup.addHorario();
     gestorfeup.addUC();*/
     exit_loop: ;
+    string caminho;
     cout<<"Que operacao quer executar?"<<endl<< "1) Carregar Ficheiros!" << endl <<"1) Fazer um pedido (alteracao de horario)" << endl <<  "2) Visualizar horario,turma e uc"<<endl;
     int n;
     int i;
@@ -34,13 +36,20 @@ void cli::helper(){
                 cin >> p;
                 switch (p) {
                     case 1:
-                        estudantes.genHorarios();
+                        cout << "Insira o caminho:";
+                        cin >> caminho;
+                        estudantes.genHorarios(caminho);
                         break;
+
                     case 2:
-                        estudantes.genUC();
+                        cout << "Insira o caminho:";
+                        cin >> caminho;
+                        estudantes.genUC(caminho);
                         break;
                     case 3:
-                        estudantes.genEtudantes();
+                        cout << "Insira o caminho:";
+                        cin >> caminho;
+                        estudantes.genEtudantes(caminho);
                         break;
                     case 4:
                         goto exit_loop;

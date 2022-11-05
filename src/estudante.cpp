@@ -12,7 +12,8 @@ Estudante::Estudante(int Numero, std::string Nome) {numero= Numero; nome = Nome;
 
 int Estudante::getNumero() const{return numero;}
 
-void Estudante::setNumero(string Numero) {numero = Numero;};
+
+void Estudante::setNumero(int Numero) {numero = Numero;};
 
 std::string Estudante::getNome() const{return nome;};
 
@@ -20,11 +21,9 @@ void Estudante::setNome(std::string Nome) {nome = Nome;};
 
 std::list<UcTurma> Estudante::getTurmas() const{return turmas;}
 
-void  Estudante::addUcTurma(const UcTurma ucTurma) const {
-    turmas.push_back(ucTurma);
-}
+void Estudante::addUcTurma(const UcTurma &ucTurma) {turmas.push_back(ucTurma);}
 
-void Estudante::rmUcTurma(const UcTurma ucTurma) {
+void Estudante::rmvUcTurma(const UcTurma& ucTurma) {
     for(auto c = turmas.begin(); c != turmas.end();c++){
         if (c->operator==(ucTurma)) {
             turmas.erase(c);

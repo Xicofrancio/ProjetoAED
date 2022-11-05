@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "gestordehorarios.h"
 #include <iostream>
 #include <fstream>
@@ -134,3 +134,4 @@ vector <Slot> GestorDeHorarios::newSchedule(const list <UcTurma> &turmas, const 
     }
 
 }
+*/

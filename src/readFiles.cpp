@@ -9,7 +9,7 @@
 using namespace std;
 
 
-vector<string> reducer(string Line, char& division){
+std::vector<std::string> readFiles::reducer(std::string Line, char &division) {
     string medium;
 
     vector<string> result;
@@ -23,37 +23,9 @@ vector<string> reducer(string Line, char& division){
     return result;
 }
 
-void readFiles::genEtudantes() {
-    string ant;
+void readFiles::genHorarios(string caminho){
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\students_classes.csv");
-    if(in.is_open()) {
-        (getline(in, line));
-        while (getline(in, line)) {
-            char& b = (char& ) ",";
-            vector<string> Students =  reducer(line, b);
-            for(auto c: Students){
-                if(c==Students[0] && ant != Students[0]){
-                    ant = c;
-                    int l = stoi(Students[0]);
-                    string s = Students[1];
-                    Estudante estudante(l,s);
-                    cout << estudante.getNome() << endl;
-                    cout << estudante.getNumero() << endl;
-                    estudantes.insert(estudante);
-                }else{
-
-                }
-
-            }
-
-        }
-    }
-}
-
-void readFiles::genHorarios(){
-    string line;
-    ifstream in("C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\csv\classes.csv");
+    ifstream in(caminho);
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -81,9 +53,10 @@ void readFiles::genHorarios(){
         }
     }
 }
-void readFiles::genUC() {
+
+void readFiles::genUC(string caminho){
     string line;
-    ifstream in("C:\Users\USER\Desktop\Universidade\2ano\Algoritmos e estrutura de dados\Fim\csv\classes_per_uc.csv");
+    ifstream in(caminho);
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -98,6 +71,46 @@ void readFiles::genUC() {
                 ucturmas.push_back(ucTurma);
             }
         }
+    }
+}
 
+
+
+
+
+
+
+void readFiles::genEtudantes(string caminho) {
+    string ant;
+    string line;
+    ifstream in(caminho);
+    if (in.is_open()) {
+        (getline(in, line));
+        while (getline(in, line)) {
+            char &b = (char &) ",";
+            vector<string> Students = reducer(line, b);
+            for (auto c: Students) {
+                if (c == Students[0] && ant != Students[0]) {
+                    ant = c;
+                    int l = stoi(Students[0]);
+                    string s = Students[1];
+                    Estudante estudante(l, s);
+                    cout << estudante.getNome() << endl;
+                    cout << estudante.getNumero() << endl;
+                    estudantes.insert(estudante);
+                }
+            }
+            for (auto c: Students) {
+                for (auto d: estudantes) {
+                    if (d.getNumero() == c[0]) {
+                        string j = Students[2];
+                        string l = Students[3];
+                        UcTurma ucTurma(j, l);
+                        d.addUcTurma(ucTurma);
+
+                    }
+                }
+            }
+        }
     }
 }

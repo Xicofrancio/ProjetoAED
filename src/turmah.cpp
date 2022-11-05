@@ -3,11 +3,8 @@
 //
 
 #include "estudante.h"
-#include "gestordehorarios.h"
-#include "pedido.h"
 #include "slot.h"
 #include "turmah.h"
-#include "ucturma.h"
 
 TurmaH::TurmaH(std::string CodUc, std::string CodTurma){codUc = CodUc; codTurma = CodTurma;}
 

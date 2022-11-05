@@ -20,6 +20,7 @@ public:
     void addEstudante();
     TurmaH(std::string CodUc, std::string CodTurma);//construtor da turma
     int get_num_estudantes();// retorna o numero de estudantes
+    void addEstudante();
 };
 
 #endif //TURMAH_H

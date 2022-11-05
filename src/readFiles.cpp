@@ -23,9 +23,9 @@ std::vector<std::string> readFiles::reducer(std::string Line, char &division) {
     return result;
 }
 
-void readFiles::genHorarios(string caminho){
+void readFiles::genHorarios(){
     string line;
-    ifstream in(caminho);
+    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -54,9 +54,9 @@ void readFiles::genHorarios(string caminho){
     }
 }
 
-void readFiles::genUC(string caminho){
+void readFiles::genUC(){
     string line;
-    ifstream in(caminho);
+    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -80,10 +80,10 @@ void readFiles::genUC(string caminho){
 
 
 
-void readFiles::genEtudantes(string caminho) {
+void readFiles::genEtudantes() {
     string ant;
     string line;
-    ifstream in(caminho);
+    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\students_classes.csv");
     if (in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {

@@ -16,9 +16,9 @@ private:
     std::set<Estudante> estudantes;
     std::vector<UcTurma> ucturmas;
 public:
-    void genEtudantes(std::string caminho);
-    void genHorarios(std::string caminho);
-    void genUC(std::string caminho);
+    void genEtudantes();
+    void genHorarios();
+    void genUC();
     std::vector<std::string> reducer(std::string Line, char& division);
 };
 

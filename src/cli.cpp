@@ -21,7 +21,6 @@ void cli::helper(){
     gestorfeup.addHorario();
     gestorfeup.addUC();*/
     exit_loop: ;
-    string caminho;
     cout<<"Que operacao quer executar?"<<endl<< "1) Carregar Ficheiros!" << endl <<"1) Fazer um pedido (alteracao de horario)" << endl <<  "2) Visualizar horario,turma e uc"<<endl;
     int n;
     int i;
@@ -36,20 +35,14 @@ void cli::helper(){
                 cin >> p;
                 switch (p) {
                     case 1:
-                        cout << "Insira o caminho:";
-                        cin >> caminho;
-                        estudantes.genHorarios(caminho);
+                        estudantes.genHorarios();
                         break;
 
                     case 2:
-                        cout << "Insira o caminho:";
-                        cin >> caminho;
-                        estudantes.genUC(caminho);
+                        estudantes.genUC();
                         break;
                     case 3:
-                        cout << "Insira o caminho:";
-                        cin >> caminho;
-                        estudantes.genEtudantes(caminho);
+                        estudantes.genEtudantes();
                         break;
                     case 4:
                         goto exit_loop;

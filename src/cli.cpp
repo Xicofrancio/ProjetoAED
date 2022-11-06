@@ -1,4 +1,5 @@
 using namespace std;
+
 #include <iostream>
 
 #include "alteracao.h"
@@ -13,20 +14,21 @@ using namespace std;
 
 using namespace std;
 
-void cli::helper(){
+void cli::helper() {
     readFiles estudantes;
 
     /*GestorDeHorarios gestorfeup;
     gestorfeup.addEstudante();
     gestorfeup.addHorario();
     gestorfeup.addUC();*/
-    exit_loop: ;
-    cout<<"Que operacao quer executar?"<<endl<< "1) Carregar Ficheiros!" << endl <<"1) Fazer um pedido (alteracao de horario)" << endl <<  "2) Visualizar horario,turma e uc"<<endl;
+    exit_loop:;
+    cout << "Que operacao quer executar?" << endl << "1) Carregar Ficheiros!" << endl
+         << "1) Fazer um pedido (alteracao de horario)" << endl << "2) Visualizar horario,turma e uc" << endl;
     int n;
     int i;
     std::string Tipo;
     cin >> n;
-    while(n != 0) {
+    while (n != 0) {
         if (n == 1) {
 
             int p;
@@ -48,7 +50,7 @@ void cli::helper(){
             }
         } else if (n == 2) {
             int l;
-            cout << "1) Visualizar horarios" ;
+            cout << "1) Visualizar horarios";
             cin >> l;
             switch (l) {
                 case 1:
@@ -63,25 +65,25 @@ void cli::helper(){
 
 
 
-        /*
-        if (n == 10) {
-            cout << "Número do aluno:" << endl;
-            cin >> i;
-            cout << "Troca pretendida:" << endl;
-            cin >> Tipo;
-            for (auto c: gestorfeup) {
-                if (c.getNumeroEstudante() == i) {
-                    Pedido pedido(c, Tipo);
-                }
-            }
+/*
+if (n == 10) {
+    cout << "Número do aluno:" << endl;
+    cin >> i;
+    cout << "Troca pretendida:" << endl;
+    cin >> Tipo;
+    for (auto c: gestorfeup) {
+        if (c.getNumeroEstudante() == i) {
+            Pedido pedido(c, Tipo);
         }
-        if (n == 2) {
-            cout << "Número do aluno:" << endl;
-            cin << int
-            i;
-            for (auto c:) {
-                if (i ==)
-            }*/
+    }
+}
+if (n == 2) {
+    cout << "Número do aluno:" << endl;
+    cin << int
+    i;
+    for (auto c:) {
+        if (i ==)
+    }*/
 
 
 

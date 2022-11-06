@@ -3,10 +3,11 @@
 //
 #include <list>
 #include "slot.h"
+
 #ifndef TURMAH_H
 #define TURMAH_H
 
-class TurmaH{
+class TurmaH {
 private:
     std::string codUc; // codigo da UC
     std::string codTurma; // codigo da Turma
@@ -18,9 +19,9 @@ public:
     std::list<Slot> getHorarioUcTurma() const; // retorna o horario da turma
     void addHorarioUcTurma(Slot HorarioUcTurma);// adiciona um horario de uma Uc a turma
     void addEstudante();
+
     TurmaH(std::string CodUc, std::string CodTurma);//construtor da turma
     int get_num_estudantes();// retorna o numero de estudantes
-    void addEstudante();
 };
 
 #endif //TURMAH_H
@@ -29,6 +30,7 @@ public:
 //
 #include <list>
 #include "slot.h"
+
 #ifndef TURMAH_H
 #define TURMAH_H
 

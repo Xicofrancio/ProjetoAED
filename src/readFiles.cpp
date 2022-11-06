@@ -7,6 +7,7 @@
 #include "readFiles.h"
 #include "estudante.h"
 #include "slot.h"
+
 using namespace std;
 
 
@@ -24,15 +25,15 @@ std::vector<std::string> readFiles::reducer(std::string Line, char &division) {
     return result;
 }
 
-void readFiles::genHorarios(){
+void readFiles::genHorarios() {
     string line;
     ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes.csv");
-    if(in.is_open()) {
+    if (in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
-            char& b = (char& ) ",";
-            vector<string> Horarios =  reducer(line, b);
-            for(auto c: Horarios){
+            char &b = (char &) ",";
+            vector<string> Horarios = reducer(line, b);
+            for (auto c: Horarios) {
                 string day = Horarios[2];
                 string type = Horarios[5];
                 float initial = stoi(Horarios[3]);
@@ -55,18 +56,19 @@ void readFiles::genHorarios(){
     }
 }
 
-void readFiles::genUC(){
+void readFiles::genUC() {
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
-    if(in.is_open()) {
+    ifstream in(
+            "C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
+    if (in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
-            char& b = (char& ) ",";
-            vector<string> UC =  reducer(line, b);
-            for(auto c: UC){
+            char &b = (char &) ",";
+            vector<string> UC = reducer(line, b);
+            for (auto c: UC) {
                 string l = UC[0];
                 string s = UC[1];
-                UcTurma ucTurma(l,s);
+                UcTurma ucTurma(l, s);
                 ucturmas.push_back(ucTurma);
             }
         }
@@ -74,15 +76,11 @@ void readFiles::genUC(){
 }
 
 
-
-
-
-
-
 void readFiles::genEtudantes() {
     string ant;
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\students_classes.csv");
+    ifstream in(
+            "C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\students_classes.csv");
     if (in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -120,14 +118,17 @@ void readFiles::getHorarioEstudante(int numero_estudante) {
     getHorarioEstudanteDia(numero_estudante, "Friday");
 }
 
-void readFiles::getHorarioEstudanteDia(int numero, string dia){
-    for(auto c : estudantes){
-        if(c.getNumero()==numero){
-            for(auto &d: c.getTurmas()){
-                for(auto &j: horarios){
-                    if(d.getCodTurma()==j.getUCTurma().getCodTurma() && d.getCodUc() == j.getUCTurma().getCodUc()) {
+void readFiles::getHorarioEstudanteDia(int numero, string dia) {
+    for (auto c: estudantes) {
+        if (c.getNumero() == numero) {
+            for (auto &d: c.getTurmas()) {
+                for (auto &j: horarios) {
+                    if (d.getCodTurma() == j.getUCTurma().getCodTurma() && d.getCodUc() == j.getUCTurma().getCodUc()) {
                         if (dia == j.getDia()) {
-                            cout << "Uc: " << j.getUCTurma().getCodUc()<<". Turma: " << j.getUCTurma().getCodTurma()<< ". Day: " << j.getDia() << ". Hora inicial: "<< j.getHoraInicio() << ". Hora final: " << j.getHoraFim() << ". Duraçao: "<< j.getDuracao() << ". Tipo: " << j.getTipo() << "." << endl;
+                            cout << "Uc: " << j.getUCTurma().getCodUc() << ". Turma: " << j.getUCTurma().getCodTurma()
+                                 << ". Day: " << j.getDia() << ". Hora inicial: " << j.getHoraInicio()
+                                 << ". Hora final: " << j.getHoraFim() << ". Duraçao: " << j.getDuracao() << ". Tipo: "
+                                 << j.getTipo() << "." << endl;
                         }
                     }
                 }

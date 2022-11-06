@@ -5,12 +5,13 @@
 #ifndef UCTURMA_H
 #define UCTURMA_H
 
-class UcTurma{
+class UcTurma {
 private:
     std::string codUc;
     std::string codTurma;
 public:
     static int num_max_estudantes;
+
     std::string getCodUc() const; // retorna codigo da UC
     void setCodUc(std::string CodUc);// define o codigo da Uc
     std::string getCodTurma() const; // retorna o CodTurma

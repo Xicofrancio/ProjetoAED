@@ -4,7 +4,8 @@
 
 #ifndef FIM_CLI_H
 #define FIM_CLI_H
-class cli{
+
+class cli {
 private:
 
 public:
@@ -13,4 +14,5 @@ public:
      */
     void helper();
 };
+
 #endif //FIM_CLI_H

@@ -7,48 +7,56 @@
 #include "turmah.h"
 #include "ucturma.h"
 
-Slot::Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo,float Duracao, UcTurma ucTurma) {dia = Dia; horaInicio = HoraInicio; horaFim = HoraFim; tipo = Tipo; duracao = Duracao; ucturma = ucTurma;}
+Slot::Slot(std::string Dia, float HoraInicio, float HoraFim, std::string Tipo, float Duracao, UcTurma ucTurma) {
+    dia = Dia;
+    horaInicio = HoraInicio;
+    horaFim = HoraFim;
+    tipo = Tipo;
+    duracao = Duracao;
+    ucturma = ucTurma;
+}
 
-std::string Slot::getDia() const{return dia;}
+std::string Slot::getDia() const { return dia; }
 
-float Slot::getHoraInicio() const{return horaInicio;}
+float Slot::getHoraInicio() const { return horaInicio; }
 
-float Slot::getHoraFim() const{return horaFim;}
+float Slot::getHoraFim() const { return horaFim; }
 
-std::string Slot::getTipo() const{return tipo;}
+std::string Slot::getTipo() const { return tipo; }
 
-float Slot::getDuracao() const {return duracao;}
+float Slot::getDuracao() const { return duracao; }
 
-void Slot::setDia(std::string Dia) {dia = Dia;}
+void Slot::setDia(std::string Dia) { dia = Dia; }
 
-void Slot::setHoraInicio(float HoraInicio) {horaInicio = HoraInicio;}
+void Slot::setHoraInicio(float HoraInicio) { horaInicio = HoraInicio; }
 
-void Slot::setHoraFim(float HoraFim) {horaFim = HoraFim;}
+void Slot::setHoraFim(float HoraFim) { horaFim = HoraFim; }
 
-void Slot::setTipo(std::string Tipo) {tipo = Tipo;}
+void Slot::setTipo(std::string Tipo) { tipo = Tipo; }
 
-void Slot::setDuracao(float Duracao) {duracao= Duracao;}
+void Slot::setDuracao(float Duracao) { duracao = Duracao; }
 
 bool Slot::erro(Slot slot) const {
 
-    if(dia != slot.dia)return false;
+    if (dia != slot.dia)return false;
 
-    if(horaInicio == slot.horaInicio) return true;
+    if (horaInicio == slot.horaInicio) return true;
 
-    if(horaInicio < slot.horaInicio)return slot.horaInicio < slot.horaFim;
+    if (horaInicio < slot.horaInicio)return slot.horaInicio < slot.horaFim;
 
 
-    else{return horaInicio < slot.horaFim;}
+    else { return horaInicio < slot.horaFim; }
 
 }
-void Slot::setUCTurma(UcTurma ucTurma) {ucturma = ucTurma;}
 
-UcTurma Slot::getUCTurma() const {return ucturma;}
+void Slot::setUCTurma(UcTurma ucTurma) { ucturma = ucTurma; }
 
-Slot::Slot(){
+UcTurma Slot::getUCTurma() const { return ucturma; }
+
+Slot::Slot() {
     dia = "Monday";
     tipo = "T";
-    dia= 1;
+    dia = 1;
     horaInicio = 0;
     horaFim = 0;
     duracao = 0;

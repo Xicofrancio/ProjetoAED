@@ -11,11 +11,12 @@
 
 
 class readFiles {
-private:
+
+
+public:
     std::vector<Slot> horarios;
     std::set<Estudante> estudantes;
     std::vector<UcTurma> ucturmas;
-public:
     /*!
      * armazena estudantes na respetiva classe
      */

@@ -1,16 +1,13 @@
-using namespace std;
+
 #include <iostream>
 
-#include "alteracao.h"
 #include "estudante.h"
-#include "gestordehorarios.h"
 #include "pedido.h"
 #include "slot.h"
 #include "turmah.h"
 #include "ucturma.h"
 #include "readFiles.h"
 #include "cli.h"
-
 using namespace std;
 
 void cli::helper(){

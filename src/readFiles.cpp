@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
+#include <sstream>
 #include "readFiles.h"
 #include "estudante.h"
 #include "slot.h"
@@ -26,7 +28,7 @@ std::vector<std::string> readFiles::reducer(std::string Line, char &division) {
 
 void readFiles::genHorarios(){
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes.csv");
+    ifstream in("/Users/davidcastro/CLionProjects/untitled11/classes.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -57,7 +59,7 @@ void readFiles::genHorarios(){
 
 void readFiles::genUC(){
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\classes_per_uc.csv");
+    ifstream in("/Users/davidcastro/CLionProjects/untitled11/classes_per_uc.csv");
     if(in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
@@ -82,32 +84,35 @@ void readFiles::genUC(){
 void readFiles::genEtudantes() {
     string ant;
     string line;
-    ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\students_classes.csv");
+    ifstream in("/Users/davidcastro/CLionProjects/untitled11/students_classes.csv");
     if (in.is_open()) {
         (getline(in, line));
         while (getline(in, line)) {
             char &b = (char &) ",";
             vector<string> Students = reducer(line, b);
-            for (auto c: Students) {
+
+            for (auto c: Students)
                 if (c == Students[0] && ant != Students[0]) {
                     ant = c;
                     int l = stoi(Students[0]);
                     string s = Students[1];
-                    Estudante estudante(l, s);
-                    estudantes.insert(estudante);
-                }
-            }
-            for (auto c: Students) {
-                for (auto d: estudantes) {
-                    if (d.getNumero() == c[0]) {
-                        string j = Students[2];
-                        string l = Students[3];
-                        UcTurma ucTurma(j, l);
-                        d.addUcTurma(ucTurma);
+                    UcTurma ucTURMA(Students[2], Students[3]);
+                    bool exists = false;
+                    for (auto c: estudantes) {
+                        if (s == c.getNome()) {
+                            c.addUcTurma(ucTURMA);
+                            exists = true;
+                            break;
+                        }
+                    }
 
+                    if (!exists) {
+                        Estudante estudante1(l, s);
+                        estudante1.addUcTurma(ucTURMA);
+                        estudantes.insert(estudante1);
                     }
                 }
-            }
+
         }
     }
 }
@@ -121,17 +126,32 @@ void readFiles::getHorarioEstudante(int numero_estudante) {
 }
 
 void readFiles::getHorarioEstudanteDia(int numero, string dia){
+    set<string> array;
     for(auto c : estudantes){
         if(c.getNumero()==numero){
             for(auto &d: c.getTurmas()){
                 for(auto &j: horarios){
                     if(d.getCodTurma()==j.getUCTurma().getCodTurma() && d.getCodUc() == j.getUCTurma().getCodUc()) {
                         if (dia == j.getDia()) {
-                            cout << "Uc: " << j.getUCTurma().getCodUc()<<". Turma: " << j.getUCTurma().getCodTurma()<< ". Day: " << j.getDia() << ". Hora inicial: "<< j.getHoraInicio() << ". Hora final: " << j.getHoraFim() << ". Duraçao: "<< j.getDuracao() << ". Tipo: " << j.getTipo() << "." << endl;
+                            ostringstream ss1,ss2,ss3;
+                            ss1.precision(2);
+                            ss2.precision(2);
+                            ss3.precision(2);
+                            ss1<<fixed<<j.getHoraInicio();
+                            ss2<<fixed<<j.getHoraFim();
+                            ss3<<fixed<<j.getDuracao();
+                            string d_str1 = ss1.str();
+                            string d_str2 = ss2.str();
+                            string d_str3 = ss3.str();
+                            string result =  "Uc: " + j.getUCTurma().getCodUc()+". Turma: " + j.getUCTurma().getCodTurma()+ ". Day: " + j.getDia() + ". Hora inicial: " + d_str1+ ". Hora final: " + d_str2 + ". Duraçao: "+d_str3 + ". Tipo: " + j.getTipo() + ".";
+                            array.insert(result);
                         }
                     }
                 }
             }
         }
+    }
+    for(auto a : array){
+        cout<<a<<endl;
     }
 }

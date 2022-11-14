@@ -8,23 +8,26 @@
 
 using namespace std;
 
-Estudante::Estudante(int Numero, std::string Nome) {numero= Numero; nome = Nome;}
+Estudante::Estudante(int Numero, std::string Nome) {
+    numero = Numero;
+    nome = Nome;
+}
 
-int Estudante::getNumero() const{return numero;}
+int Estudante::getNumero() const { return numero; }
 
 
-void Estudante::setNumero(int Numero) {numero = Numero;};
+void Estudante::setNumero(int Numero) { numero = Numero; };
 
-std::string Estudante::getNome() const{return nome;};
+std::string Estudante::getNome() const { return nome; };
 
-void Estudante::setNome(std::string Nome) {nome = Nome;};
+void Estudante::setNome(std::string Nome) { nome = Nome; };
 
-std::list<UcTurma> Estudante::getTurmas() const{return turmas;}
+std::list<UcTurma> Estudante::getTurmas() const { return turmas; }
 
-void Estudante::addUcTurma(const UcTurma &ucTurma) {turmas.push_back(ucTurma);}
+void Estudante::addUcTurma(const UcTurma &ucTurma) { turmas.push_back(ucTurma); }
 
-void Estudante::rmvUcTurma(const UcTurma& ucTurma) {
-    for(auto c = turmas.begin(); c != turmas.end();c++){
+void Estudante::rmvUcTurma(const UcTurma &ucTurma) {
+    for (auto c = turmas.begin(); c != turmas.end(); c++) {
         if (c->operator==(ucTurma)) {
             turmas.erase(c);
             break;
@@ -32,10 +35,11 @@ void Estudante::rmvUcTurma(const UcTurma& ucTurma) {
     }
 }
 
-bool Estudante::operator<(const Estudante estudante) const{
+bool Estudante::operator<(const Estudante estudante) const {
     return numero < estudante.numero;
 }
-bool Estudante::operator==(const Estudante estudante) const{
+
+bool Estudante::operator==(const Estudante estudante) const {
     return numero == estudante.numero;
 }
 

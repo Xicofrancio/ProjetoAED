@@ -3,23 +3,21 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_turma_h_ae02d1f81703bb539d84764b1f6fa9993}\label{class_turma_h_ae02d1f81703bb539d84764b1f6fa9993}} 
-std\+::string {\bfseries get\+Cod\+Uc} () const
+std\+::string \mbox{\hyperlink{class_turma_h_ae02d1f81703bb539d84764b1f6fa9993}{get\+Cod\+Uc}} () const
 \item 
-\mbox{\Hypertarget{class_turma_h_af88070c179a6d82b10a79932f81cdfc7}\label{class_turma_h_af88070c179a6d82b10a79932f81cdfc7}} 
-std\+::string {\bfseries get\+Cod\+Turma} () const
+std\+::string \mbox{\hyperlink{class_turma_h_af88070c179a6d82b10a79932f81cdfc7}{get\+Cod\+Turma}} () const
 \item 
-\mbox{\Hypertarget{class_turma_h_ac6882c0b65ed9be02ca5e4246a39310d}\label{class_turma_h_ac6882c0b65ed9be02ca5e4246a39310d}} 
-std\+::list$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ {\bfseries get\+Horario\+Uc\+Turma} () const
+std\+::list$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ \mbox{\hyperlink{class_turma_h_ac6882c0b65ed9be02ca5e4246a39310d}{get\+Horario\+Uc\+Turma}} () const
 \item 
-\mbox{\Hypertarget{class_turma_h_aead864952d00f365b16419c8d765674e}\label{class_turma_h_aead864952d00f365b16419c8d765674e}} 
-void {\bfseries add\+Horario\+Uc\+Turma} (\mbox{\hyperlink{class_slot}{Slot}} Horario\+Uc\+Turma)
+void \mbox{\hyperlink{class_turma_h_aead864952d00f365b16419c8d765674e}{add\+Horario\+Uc\+Turma}} (\mbox{\hyperlink{class_slot}{Slot}} Horario\+Uc\+Turma)
 \item 
-\mbox{\Hypertarget{class_turma_h_a8bfbf0fb15f61d92c3dba42d81b1be98}\label{class_turma_h_a8bfbf0fb15f61d92c3dba42d81b1be98}} 
-{\bfseries TurmaH} (std\+::string Cod\+Uc, std\+::string Cod\+Turma)
+\mbox{\hyperlink{class_turma_h_a8bfbf0fb15f61d92c3dba42d81b1be98}{TurmaH}} (std\+::string Cod\+Uc, std\+::string Cod\+Turma)
 \item 
-\mbox{\Hypertarget{class_turma_h_a12c04c3150a7643e90c5632be283fb91}\label{class_turma_h_a12c04c3150a7643e90c5632be283fb91}} 
-int {\bfseries get\+\_\+num\+\_\+estudantes} ()
+int \mbox{\hyperlink{class_turma_h_a12c04c3150a7643e90c5632be283fb91}{get\+\_\+num\+\_\+estudantes}} ()
+\item 
+void \mbox{\hyperlink{class_turma_h_ab418ffb20dbae4211fc23ce5feab5529}{add\+Estudante}} ()
+\item 
+bool \mbox{\hyperlink{class_turma_h_a5e4ce234f087831ae55add0b27019ea2}{is\+\_\+possible}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -36,6 +34,87 @@ std\+::list$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ {\bfseries horarios\+Uc\+
 \mbox{\Hypertarget{class_turma_h_aa13e055f620da165071febf65442abf9}\label{class_turma_h_aa13e055f620da165071febf65442abf9}} 
 int {\bfseries num\+\_\+estudantes} = 0
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_turma_h_a8bfbf0fb15f61d92c3dba42d81b1be98}\label{class_turma_h_a8bfbf0fb15f61d92c3dba42d81b1be98}} 
+\index{TurmaH@{TurmaH}!TurmaH@{TurmaH}}
+\index{TurmaH@{TurmaH}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{TurmaH()}{TurmaH()}}
+{\footnotesize\ttfamily Turma\+H\+::\+TurmaH (\begin{DoxyParamCaption}\item[{std\+::string}]{Cod\+Uc,  }\item[{std\+::string}]{Cod\+Turma }\end{DoxyParamCaption})}
+
+constroi um objeto de Turma em que so seja necessario o código da uc e da turma 
+\begin{DoxyParams}{Parameters}
+{\em Cod\+Uc} & \\
+\hline
+{\em Cod\+Turma} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_turma_h_ab418ffb20dbae4211fc23ce5feab5529}\label{class_turma_h_ab418ffb20dbae4211fc23ce5feab5529}} 
+\index{TurmaH@{TurmaH}!addEstudante@{addEstudante}}
+\index{addEstudante@{addEstudante}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{addEstudante()}{addEstudante()}}
+{\footnotesize\ttfamily void Turma\+H\+::add\+Estudante (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+adiciona 1 ao numero de estudantes da turma \mbox{\Hypertarget{class_turma_h_aead864952d00f365b16419c8d765674e}\label{class_turma_h_aead864952d00f365b16419c8d765674e}} 
+\index{TurmaH@{TurmaH}!addHorarioUcTurma@{addHorarioUcTurma}}
+\index{addHorarioUcTurma@{addHorarioUcTurma}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{addHorarioUcTurma()}{addHorarioUcTurma()}}
+{\footnotesize\ttfamily void Turma\+H\+::add\+Horario\+Uc\+Turma (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_slot}{Slot}}}]{Horario\+Uc\+Turma }\end{DoxyParamCaption})}
+
+adiciona um horario a essa turma 
+\begin{DoxyParams}{Parameters}
+{\em Horario\+Uc\+Turma} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_turma_h_a12c04c3150a7643e90c5632be283fb91}\label{class_turma_h_a12c04c3150a7643e90c5632be283fb91}} 
+\index{TurmaH@{TurmaH}!get\_num\_estudantes@{get\_num\_estudantes}}
+\index{get\_num\_estudantes@{get\_num\_estudantes}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{get\_num\_estudantes()}{get\_num\_estudantes()}}
+{\footnotesize\ttfamily int Turma\+H\+::get\+\_\+num\+\_\+estudantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+retorna o numero de alunos \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_turma_h_af88070c179a6d82b10a79932f81cdfc7}\label{class_turma_h_af88070c179a6d82b10a79932f81cdfc7}} 
+\index{TurmaH@{TurmaH}!getCodTurma@{getCodTurma}}
+\index{getCodTurma@{getCodTurma}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{getCodTurma()}{getCodTurma()}}
+{\footnotesize\ttfamily std\+::string Turma\+H\+::get\+Cod\+Turma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+retorna o código da Turma \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_turma_h_ae02d1f81703bb539d84764b1f6fa9993}\label{class_turma_h_ae02d1f81703bb539d84764b1f6fa9993}} 
+\index{TurmaH@{TurmaH}!getCodUc@{getCodUc}}
+\index{getCodUc@{getCodUc}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{getCodUc()}{getCodUc()}}
+{\footnotesize\ttfamily std\+::string Turma\+H\+::get\+Cod\+Uc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+retorna o código da UC \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_turma_h_ac6882c0b65ed9be02ca5e4246a39310d}\label{class_turma_h_ac6882c0b65ed9be02ca5e4246a39310d}} 
+\index{TurmaH@{TurmaH}!getHorarioUcTurma@{getHorarioUcTurma}}
+\index{getHorarioUcTurma@{getHorarioUcTurma}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{getHorarioUcTurma()}{getHorarioUcTurma()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{class_slot}{Slot}} $>$ Turma\+H\+::get\+Horario\+Uc\+Turma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+retorna o horário dessa turma por uc; \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_turma_h_a5e4ce234f087831ae55add0b27019ea2}\label{class_turma_h_a5e4ce234f087831ae55add0b27019ea2}} 
+\index{TurmaH@{TurmaH}!is\_possible@{is\_possible}}
+\index{is\_possible@{is\_possible}!TurmaH@{TurmaH}}
+\doxysubsubsection{\texorpdfstring{is\_possible()}{is\_possible()}}
+{\footnotesize\ttfamily bool Turma\+H\+::is\+\_\+possible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+confirma se a turma não atingiu o numero máximo \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

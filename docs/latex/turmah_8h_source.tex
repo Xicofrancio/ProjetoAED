@@ -17,38 +17,16 @@
 \DoxyCodeLine{13     std::list<Slot> horariosUcTurma; \textcolor{comment}{// Horario da turma}}
 \DoxyCodeLine{14     \textcolor{keywordtype}{int} num\_estudantes = 0; \textcolor{comment}{// numero de estudantes}}
 \DoxyCodeLine{15 \textcolor{keyword}{public}:}
-\DoxyCodeLine{16     std::string getCodUc() \textcolor{keyword}{const}; \textcolor{comment}{// retorna codigo da Uc}}
-\DoxyCodeLine{17     std::string getCodTurma() \textcolor{keyword}{const}; \textcolor{comment}{// retorna codigo da Turma}}
-\DoxyCodeLine{18     std::list<Slot> getHorarioUcTurma() \textcolor{keyword}{const}; \textcolor{comment}{// retorna o horario da turma}}
-\DoxyCodeLine{19     \textcolor{keywordtype}{void} addHorarioUcTurma(\mbox{\hyperlink{class_slot}{Slot}} HorarioUcTurma);\textcolor{comment}{// adiciona um horario de uma Uc a turma}}
-\DoxyCodeLine{20     \mbox{\hyperlink{class_turma_h}{TurmaH}}(std::string CodUc, std::string CodTurma);\textcolor{comment}{//construtor da turma}}
-\DoxyCodeLine{21     \textcolor{keywordtype}{int} get\_num\_estudantes();\textcolor{comment}{// retorna o numero de estudantes}}
-\DoxyCodeLine{22 \};}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//TURMAH\_H}}
-\DoxyCodeLine{25 \textcolor{comment}{//}}
-\DoxyCodeLine{26 \textcolor{comment}{// Created by USER on 28/10/2022.}}
-\DoxyCodeLine{27 \textcolor{comment}{//}}
-\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <list>}}
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}slot.h"{}}}
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef TURMAH\_H}}
-\DoxyCodeLine{31 \textcolor{preprocessor}{\#define TURMAH\_H}}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33 \textcolor{keyword}{class }\mbox{\hyperlink{class_turma_h}{TurmaH}}\{}
-\DoxyCodeLine{34 \textcolor{keyword}{private}:}
-\DoxyCodeLine{35     std::string codUc;}
-\DoxyCodeLine{36     std::string codTurma;}
-\DoxyCodeLine{37     std::list<Slot> horarioUcTurma;}
-\DoxyCodeLine{38     \textcolor{keywordtype}{int} num\_estudantes = 0;}
-\DoxyCodeLine{39 \textcolor{keyword}{public}:}
-\DoxyCodeLine{40     std::string getCodUc() \textcolor{keyword}{const};}
-\DoxyCodeLine{41     std::string getCodTurma() \textcolor{keyword}{const};}
-\DoxyCodeLine{42     std::list<Slot> getHorarioUcTurma() \textcolor{keyword}{const};}
-\DoxyCodeLine{43     \textcolor{keywordtype}{void} addHorarioUcTurma(\mbox{\hyperlink{class_slot}{Slot}} HorarioUcTurma);}
-\DoxyCodeLine{44     \mbox{\hyperlink{class_turma_h}{TurmaH}}(std::string CodUc, std::string CodTurma);}
-\DoxyCodeLine{45     \textcolor{keywordtype}{int} get\_num\_estudantes();}
-\DoxyCodeLine{46 \};}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//TURMAH\_H}}
+\DoxyCodeLine{20     std::string \mbox{\hyperlink{class_turma_h_ae02d1f81703bb539d84764b1f6fa9993}{getCodUc}}() \textcolor{keyword}{const};\textcolor{comment}{// retorna codigo da Uc}}
+\DoxyCodeLine{25 \textcolor{comment}{}    std::string \mbox{\hyperlink{class_turma_h_af88070c179a6d82b10a79932f81cdfc7}{getCodTurma}}() \textcolor{keyword}{const}; \textcolor{comment}{// retorna codigo da Turma}}
+\DoxyCodeLine{30 \textcolor{comment}{}    std::list<Slot> \mbox{\hyperlink{class_turma_h_ac6882c0b65ed9be02ca5e4246a39310d}{getHorarioUcTurma}}() \textcolor{keyword}{const}; \textcolor{comment}{// retorna o horario da turma}}
+\DoxyCodeLine{35 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_turma_h_aead864952d00f365b16419c8d765674e}{addHorarioUcTurma}}(\mbox{\hyperlink{class_slot}{Slot}} HorarioUcTurma);\textcolor{comment}{// adiciona um horario de uma Uc a turma}}
+\DoxyCodeLine{41 \textcolor{comment}{}    \mbox{\hyperlink{class_turma_h}{TurmaH}}(std::string CodUc, std::string CodTurma);\textcolor{comment}{//construtor da turma}}
+\DoxyCodeLine{46 \textcolor{comment}{}    \textcolor{keywordtype}{int} \mbox{\hyperlink{class_turma_h_a12c04c3150a7643e90c5632be283fb91}{get\_num\_estudantes}}();\textcolor{comment}{// retorna o numero de estudantes}}
+\DoxyCodeLine{50 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_turma_h_ab418ffb20dbae4211fc23ce5feab5529}{addEstudante}}();}
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_turma_h_a5e4ce234f087831ae55add0b27019ea2}{is\_possible}}();}
+\DoxyCodeLine{56 \};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//TURMAH\_h}}
 
 \end{DoxyCode}

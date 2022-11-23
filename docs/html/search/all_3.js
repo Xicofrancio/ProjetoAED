@@ -1,4 +1,31 @@
 var searchData=
 [
-  ['gestordehorarios_0',['GestorDeHorarios',['../class_gestor_de_horarios.html',1,'']]]
+  ['genetudantes_0',['genEtudantes',['../classread_files.html#a38dc163614dcba7012a39219e86b00b1',1,'readFiles']]],
+  ['genhorarios_1',['genHorarios',['../classread_files.html#a8c9bf811526a0135ff02551762ad1b6a',1,'readFiles']]],
+  ['genuc_2',['genUC',['../classread_files.html#a5176a0be2da2b78be54cd9be2ef6eb0e',1,'readFiles']]],
+  ['gestordehorarios_3',['GestorDeHorarios',['../class_gestor_de_horarios.html',1,'']]],
+  ['get_5fnum_5festudantes_4',['get_num_estudantes',['../class_turma_h.html#a12c04c3150a7643e90c5632be283fb91',1,'TurmaH']]],
+  ['getatual_5',['getAtual',['../class_alteracao.html#aa3afe22eada1e8437f0490e50765a236',1,'Alteracao']]],
+  ['getcodigoturma_6',['getCodigoTurma',['../class_gestor_de_horarios.html#a41069e7e0b1ef701a0bc91240a7d3e45',1,'GestorDeHorarios']]],
+  ['getcodturma_7',['getCodTurma',['../class_turma_h.html#af88070c179a6d82b10a79932f81cdfc7',1,'TurmaH::getCodTurma()'],['../class_uc_turma.html#a8e839f7d286dff140f1c2574a8d60658',1,'UcTurma::getCodTurma()']]],
+  ['getcoduc_8',['getCodUc',['../class_turma_h.html#ae02d1f81703bb539d84764b1f6fa9993',1,'TurmaH::getCodUc()'],['../class_uc_turma.html#afaa5fae08af8b61e9c57a9829f9f0c95',1,'UcTurma::getCodUc()']]],
+  ['getdesejada_9',['getDesejada',['../class_alteracao.html#aaf6cea14e1f81ba279c8b21b2e14e2d0',1,'Alteracao']]],
+  ['getdia_10',['getDia',['../class_slot.html#a5e2985b5aea911b04334ed808c99d6e7',1,'Slot']]],
+  ['getduracao_11',['getDuracao',['../class_slot.html#a73ed9c1030d8a30819102324f603dcff',1,'Slot']]],
+  ['getestudante_12',['getEstudante',['../class_pedido.html#a029569602dc0ca477204960015604d16',1,'Pedido']]],
+  ['gethorafim_13',['getHoraFim',['../class_slot.html#a6d68e03b50ab4ce6bfc626ed7d25e82c',1,'Slot']]],
+  ['gethorainicio_14',['getHoraInicio',['../class_slot.html#a4aefc1df12a431ea97f273f52f015fa5',1,'Slot']]],
+  ['gethorarioestudante_15',['getHorarioEstudante',['../classread_files.html#a4c9059e8b603d8a1e935e1d3f0d02f74',1,'readFiles']]],
+  ['gethorarioestudantedia_16',['getHorarioEstudanteDia',['../classread_files.html#adcdfc096f0cfec754b4b6de1c0e6739a',1,'readFiles']]],
+  ['gethorariosturma_17',['getHorariosTurma',['../class_gestor_de_horarios.html#adc4c4acf949fa4b2f91013312fd21331',1,'GestorDeHorarios']]],
+  ['gethorarioucturma_18',['getHorarioUcTurma',['../class_turma_h.html#ac6882c0b65ed9be02ca5e4246a39310d',1,'TurmaH']]],
+  ['getnome_19',['getNome',['../class_estudante.html#ae3b9a6b8be82f04b781a0d416457bcad',1,'Estudante']]],
+  ['getnumero_20',['getNumero',['../class_estudante.html#a154968e7439b30ae9b4264278187c4c9',1,'Estudante']]],
+  ['getnumeroestudante_21',['getNumeroEstudante',['../class_gestor_de_horarios.html#ab1befcd5d59434fec7bce576667d2dd9',1,'GestorDeHorarios']]],
+  ['gettipo_22',['getTipo',['../class_slot.html#a9bb0e0b1f95c938c313213a151a90581',1,'Slot']]],
+  ['gettipopedido_23',['getTipoPedido',['../class_pedido.html#a719ac52d8038decc8f9ad8ef402b2065',1,'Pedido']]],
+  ['getturmah_24',['getTurmaH',['../class_gestor_de_horarios.html#ac2b204bf81cbeb67f571e53386bdceba',1,'GestorDeHorarios']]],
+  ['getturmas_25',['getTurmas',['../class_estudante.html#a317e599740655e13f721a63b96837140',1,'Estudante']]],
+  ['getucdesejadas_26',['getUcDesejadas',['../class_pedido.html#a52e62362857d81354b29924553087b9a',1,'Pedido']]],
+  ['getucturma_27',['getUCTurma',['../class_slot.html#a709ea51c2c3fa14186c78d411530f216',1,'Slot']]]
 ];

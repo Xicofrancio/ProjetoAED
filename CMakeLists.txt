@@ -11,14 +11,13 @@ add_executable(Projeto
         csv/classes.csv
         csv/classes_per_uc.csv
         csv/students_classes.csv
-        main.cpp
-        src/ucturma.cpp
-        src/cli.cpp
-        src/estudante.cpp
-        src/gestordehorarios.cpp
-        src/pedido.cpp
-        src/slot.cpp
-        src/turmah.cpp
-        src/readFiles.cpp)
+        codigo/main.cpp
+        codigo/src/ucturma.cpp
+        codigo/src/cli.cpp
+        codigo/src/estudante.cpp
+        codigo/src/pedido.cpp
+        codigo/src/slot.cpp
+        codigo/src/turmah.cpp
+        codigo/src/readFiles.cpp)
 
 add_compile_definitions(_GLIBCXX_USE_CXX11_ABI=0)

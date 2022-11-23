@@ -41,6 +41,11 @@ bool Slot::erro(Slot slot) const {
     else{return horaInicio < slot.horaFim;}
 
 }
+
+bool Slot::operator<(Slot slot) {
+    if(duracao<slot.duracao)
+}
+
 void Slot::setUCTurma(UcTurma ucTurma) {ucturma = ucTurma;}
 
 UcTurma Slot::getUCTurma() const {return ucturma;}

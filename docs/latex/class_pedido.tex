@@ -6,23 +6,17 @@
 \mbox{\Hypertarget{class_pedido_a729de85e0909e6499b2c1dd3e1ddf04c}\label{class_pedido_a729de85e0909e6499b2c1dd3e1ddf04c}} 
 {\bfseries Pedido} (\mbox{\hyperlink{class_estudante}{Estudante}} Estudante1, std\+::string Tipo)
 \item 
-\mbox{\Hypertarget{class_pedido_a029569602dc0ca477204960015604d16}\label{class_pedido_a029569602dc0ca477204960015604d16}} 
-\mbox{\hyperlink{class_estudante}{Estudante}} {\bfseries get\+Estudante} ()
+\mbox{\hyperlink{class_estudante}{Estudante}} \mbox{\hyperlink{class_pedido_a029569602dc0ca477204960015604d16}{get\+Estudante}} ()
 \item 
-\mbox{\Hypertarget{class_pedido_a52e62362857d81354b29924553087b9a}\label{class_pedido_a52e62362857d81354b29924553087b9a}} 
-std\+::vector$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ {\bfseries get\+Uc\+Desejadas} ()
+std\+::vector$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ \mbox{\hyperlink{class_pedido_a52e62362857d81354b29924553087b9a}{get\+Uc\+Desejadas}} ()
 \item 
-\mbox{\Hypertarget{class_pedido_a719ac52d8038decc8f9ad8ef402b2065}\label{class_pedido_a719ac52d8038decc8f9ad8ef402b2065}} 
-std\+::string {\bfseries get\+Tipo\+Pedido} ()
+std\+::string \mbox{\hyperlink{class_pedido_a719ac52d8038decc8f9ad8ef402b2065}{get\+Tipo\+Pedido}} ()
 \item 
-\mbox{\Hypertarget{class_pedido_a8818668ebcfc9adc51ce1b2bd1404a72}\label{class_pedido_a8818668ebcfc9adc51ce1b2bd1404a72}} 
-void {\bfseries set\+Estudante} (const \mbox{\hyperlink{class_estudante}{Estudante}} Estudante1)
+void \mbox{\hyperlink{class_pedido_a8818668ebcfc9adc51ce1b2bd1404a72}{set\+Estudante}} (const \mbox{\hyperlink{class_estudante}{Estudante}} Estudante1)
 \item 
-\mbox{\Hypertarget{class_pedido_a3ac2b822ff930dcafa96b5c976d1d3ba}\label{class_pedido_a3ac2b822ff930dcafa96b5c976d1d3ba}} 
-void {\bfseries add\+Uc\+Desejada} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} Uc\+Turma\+Desejada)
+void \mbox{\hyperlink{class_pedido_a3ac2b822ff930dcafa96b5c976d1d3ba}{add\+Uc\+Desejada}} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} Uc\+Turma\+Desejada)
 \item 
-\mbox{\Hypertarget{class_pedido_a5959e758360073c2742905cffe444169}\label{class_pedido_a5959e758360073c2742905cffe444169}} 
-void {\bfseries set\+Tipo\+Pedido} (std\+::string tipo)
+void \mbox{\hyperlink{class_pedido_a5959e758360073c2742905cffe444169}{set\+Tipo\+Pedido}} (std\+::string tipo)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -36,6 +30,69 @@ std\+::string {\bfseries tipo}
 \mbox{\Hypertarget{class_pedido_aa3fc681113322c89886813b180178083}\label{class_pedido_aa3fc681113322c89886813b180178083}} 
 std\+::vector$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ {\bfseries Uc\+Turma\+Desejadas}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pedido_a3ac2b822ff930dcafa96b5c976d1d3ba}\label{class_pedido_a3ac2b822ff930dcafa96b5c976d1d3ba}} 
+\index{Pedido@{Pedido}!addUcDesejada@{addUcDesejada}}
+\index{addUcDesejada@{addUcDesejada}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{addUcDesejada()}{addUcDesejada()}}
+{\footnotesize\ttfamily void Pedido\+::add\+Uc\+Desejada (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}}}]{Uc\+Turma\+Desejada }\end{DoxyParamCaption})}
+
+permite adicionar uma uc 
+\begin{DoxyParams}{Parameters}
+{\em Uc\+Turma\+Desejada} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pedido_a029569602dc0ca477204960015604d16}\label{class_pedido_a029569602dc0ca477204960015604d16}} 
+\index{Pedido@{Pedido}!getEstudante@{getEstudante}}
+\index{getEstudante@{getEstudante}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{getEstudante()}{getEstudante()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_estudante}{Estudante}} Pedido\+::get\+Estudante (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+devolve o estudante \begin{DoxyReturn}{Returns}
+estudante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pedido_a719ac52d8038decc8f9ad8ef402b2065}\label{class_pedido_a719ac52d8038decc8f9ad8ef402b2065}} 
+\index{Pedido@{Pedido}!getTipoPedido@{getTipoPedido}}
+\index{getTipoPedido@{getTipoPedido}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{getTipoPedido()}{getTipoPedido()}}
+{\footnotesize\ttfamily std\+::string Pedido\+::get\+Tipo\+Pedido (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+devolve o tipo de pedido(alteração/remoção turma etc...) \begin{DoxyReturn}{Returns}
+tipo de pedido 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pedido_a52e62362857d81354b29924553087b9a}\label{class_pedido_a52e62362857d81354b29924553087b9a}} 
+\index{Pedido@{Pedido}!getUcDesejadas@{getUcDesejadas}}
+\index{getUcDesejadas@{getUcDesejadas}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{getUcDesejadas()}{getUcDesejadas()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ Pedido\+::get\+Uc\+Desejadas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+devolve as uc pretendidas \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pedido_a8818668ebcfc9adc51ce1b2bd1404a72}\label{class_pedido_a8818668ebcfc9adc51ce1b2bd1404a72}} 
+\index{Pedido@{Pedido}!setEstudante@{setEstudante}}
+\index{setEstudante@{setEstudante}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{setEstudante()}{setEstudante()}}
+{\footnotesize\ttfamily void Pedido\+::set\+Estudante (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_estudante}{Estudante}}}]{Estudante1 }\end{DoxyParamCaption})}
+
+permite criar um estudante novo 
+\begin{DoxyParams}{Parameters}
+{\em Estudante1} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pedido_a5959e758360073c2742905cffe444169}\label{class_pedido_a5959e758360073c2742905cffe444169}} 
+\index{Pedido@{Pedido}!setTipoPedido@{setTipoPedido}}
+\index{setTipoPedido@{setTipoPedido}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{setTipoPedido()}{setTipoPedido()}}
+{\footnotesize\ttfamily void Pedido\+::set\+Tipo\+Pedido (\begin{DoxyParamCaption}\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+permit definir o tipo de pedido a fazer 
+\begin{DoxyParams}{Parameters}
+{\em tipo} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

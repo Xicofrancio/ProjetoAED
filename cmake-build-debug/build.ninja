@@ -49,68 +49,61 @@ cmake_ninja_workdir = C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ es
 
 build cmake_object_order_depends_target_Projeto: phony || CMakeFiles/Projeto.dir
 
-build CMakeFiles/Projeto.dir/main.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/main.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/main.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/main.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo
 
-build CMakeFiles/Projeto.dir/src/ucturma.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/ucturma.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/ucturma.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/ucturma.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\ucturma.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\ucturma.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
-build CMakeFiles/Projeto.dir/src/cli.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/cli.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/cli.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/cli.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\cli.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\cli.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
-build CMakeFiles/Projeto.dir/src/estudante.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/estudante.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/estudante.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/estudante.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\estudante.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\estudante.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
-build CMakeFiles/Projeto.dir/src/gestordehorarios.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/gestordehorarios.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/pedido.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/pedido.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\gestordehorarios.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\pedido.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
-build CMakeFiles/Projeto.dir/src/pedido.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/pedido.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/slot.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/slot.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\pedido.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\slot.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
-build CMakeFiles/Projeto.dir/src/slot.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/slot.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/turmah.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/turmah.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\slot.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\turmah.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
-build CMakeFiles/Projeto.dir/src/turmah.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/turmah.cpp || cmake_object_order_depends_target_Projeto
+build CMakeFiles/Projeto.dir/codigo/src/readFiles.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/codigo/src/readFiles.cpp || cmake_object_order_depends_target_Projeto
   DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\turmah.cpp.obj.d
+  DEP_FILE = CMakeFiles\Projeto.dir\codigo\src\readFiles.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
-
-build CMakeFiles/Projeto.dir/src/readFiles.cpp.obj: CXX_COMPILER__Projeto_Debug C$:/Users/USER/Desktop/Universidade/2ano/Algoritmos$ e$ estrutura$ de$ dados/Fim/src/readFiles.cpp || cmake_object_order_depends_target_Projeto
-  DEFINES = -D_GLIBCXX_USE_CXX11_ABI=0
-  DEP_FILE = CMakeFiles\Projeto.dir\src\readFiles.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Projeto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\Projeto.dir\codigo\src
 
 
 # =============================================================================
@@ -120,7 +113,7 @@ build CMakeFiles/Projeto.dir/src/readFiles.cpp.obj: CXX_COMPILER__Projeto_Debug 
 #############################################
 # Link the executable Projeto.exe
 
-build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/main.cpp.obj CMakeFiles/Projeto.dir/src/ucturma.cpp.obj CMakeFiles/Projeto.dir/src/cli.cpp.obj CMakeFiles/Projeto.dir/src/estudante.cpp.obj CMakeFiles/Projeto.dir/src/gestordehorarios.cpp.obj CMakeFiles/Projeto.dir/src/pedido.cpp.obj CMakeFiles/Projeto.dir/src/slot.cpp.obj CMakeFiles/Projeto.dir/src/turmah.cpp.obj CMakeFiles/Projeto.dir/src/readFiles.cpp.obj
+build Projeto.exe: CXX_EXECUTABLE_LINKER__Projeto_Debug CMakeFiles/Projeto.dir/codigo/main.cpp.obj CMakeFiles/Projeto.dir/codigo/src/ucturma.cpp.obj CMakeFiles/Projeto.dir/codigo/src/cli.cpp.obj CMakeFiles/Projeto.dir/codigo/src/estudante.cpp.obj CMakeFiles/Projeto.dir/codigo/src/pedido.cpp.obj CMakeFiles/Projeto.dir/codigo/src/slot.cpp.obj CMakeFiles/Projeto.dir/codigo/src/turmah.cpp.obj CMakeFiles/Projeto.dir/codigo/src/readFiles.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Projeto.dir

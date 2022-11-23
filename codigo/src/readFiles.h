@@ -11,11 +11,12 @@
 
 
 class readFiles {
-private:
-    std::vector<Slot> horarios;
-    std::set<Estudante> estudantes;
-    std::vector<UcTurma> ucturmas;
+
+
 public:
+    std::set<Slot> horarios;
+    std::list<Estudante> estudantes;
+    std::vector<UcTurma> ucturmas;
     /*!
      * armazena estudantes na respetiva classe
      */
@@ -33,6 +34,8 @@ public:
      * @param numero_estudante
      */
     void getHorarioEstudante(int numero_estudante);
+
+    void genUcEstudante();
     /*!
      * devolve o horário de um determinado estudante de acordo com o dia da semana
      * @param numero
@@ -45,7 +48,10 @@ public:
      * @param division
      * @return os ficheiros sem virgulas de separação
      */
+
+    void visualizarEstudantes();
     std::vector<std::string> reducer(std::string Line, char& division);
+
 };
 
 

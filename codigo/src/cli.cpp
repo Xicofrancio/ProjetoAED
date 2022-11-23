@@ -1,19 +1,34 @@
-using namespace std;
+
 #include <iostream>
 
-#include "alteracao.h"
 #include "estudante.h"
-#include "gestordehorarios.h"
 #include "pedido.h"
 #include "slot.h"
 #include "turmah.h"
 #include "ucturma.h"
 #include "readFiles.h"
 #include "cli.h"
+#include <algorithm>
 
 using namespace std;
 
+bool sortnumberdecrescente(Estudante &p1, Estudante &p2) {
+    if(p1.getNumero()>p2.getNumero()) return true;
+    return false;
+}
+
+bool sortnumbercrescente(Estudante &p1, Estudante &p2) {
+    if(p1.getNumero()<p2.getNumero()) return true;
+    return false;
+}
+
+bool sortbyname(Estudante &p1, Estudante &p2){
+    if(p1.getNome()<p2.getNome()) return true;
+    return false;
+}
+
 void cli::helper(){
+
     readFiles estudantes;
 
     /*GestorDeHorarios gestorfeup;
@@ -21,7 +36,7 @@ void cli::helper(){
     gestorfeup.addHorario();
     gestorfeup.addUC();*/
     exit_loop: ;
-    cout<<"Que operacao quer executar?"<<endl<< "1) Carregar Ficheiros!" << endl <<"1) Fazer um pedido (alteracao de horario)" << endl <<  "2) Visualizar horario,turma e uc"<<endl;
+    cout<<"Que operacao quer executar?"<<endl<< "1) Carregar Ficheiros!" << endl <<"2) Visualizar horario,turma e uc" << endl << "3) Fazer um pedido (alteracao de horario)"<<endl;
     int n;
     int i;
     std::string Tipo;
@@ -48,11 +63,27 @@ void cli::helper(){
             }
         } else if (n == 2) {
             int l;
-            cout << "1) Visualizar horarios" ;
+            cout << "1) Visualizar horarios" << endl << "2) Visualizar estudantes";
             cin >> l;
             switch (l) {
                 case 1:
                     estudantes.getHorarioEstudante(202028547);
+                case 2:
+                    int w;
+                    cout << "1) Ordenar por ordem alfabetica" << endl << "2) Ordenar por numero de estrudante decrescente" << endl << "3) Ordenar por numero de estrudante crescente";
+                    cin >> w;
+                    if(w == 1){
+                        estudantes.estudantes.sort(sortbyname);
+                        estudantes.visualizarEstudantes();
+                    }
+                    if(w == 2){
+                        estudantes.estudantes.sort(sortnumberdecrescente);
+                        estudantes.visualizarEstudantes();
+                    }
+                    if (w == 3){
+                        estudantes.estudantes.sort(sortnumbercrescente);
+                        estudantes.visualizarEstudantes();
+                    }
             }
         }
     }

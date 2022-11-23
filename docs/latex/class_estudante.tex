@@ -6,32 +6,23 @@
 \mbox{\Hypertarget{class_estudante_aef57466f08ff42b4c8ab1b7f6df75a34}\label{class_estudante_aef57466f08ff42b4c8ab1b7f6df75a34}} 
 {\bfseries Estudante} (int numero, std\+::string nome)
 \item 
-\mbox{\Hypertarget{class_estudante_a154968e7439b30ae9b4264278187c4c9}\label{class_estudante_a154968e7439b30ae9b4264278187c4c9}} 
-int {\bfseries get\+Numero} () const
+int \mbox{\hyperlink{class_estudante_a154968e7439b30ae9b4264278187c4c9}{get\+Numero}} () const
 \item 
-\mbox{\Hypertarget{class_estudante_a7cbac12585d8df11892052a50d440ca2}\label{class_estudante_a7cbac12585d8df11892052a50d440ca2}} 
-void {\bfseries set\+Numero} (int Numero)
+void \mbox{\hyperlink{class_estudante_a7cbac12585d8df11892052a50d440ca2}{set\+Numero}} (int Numero)
 \item 
-\mbox{\Hypertarget{class_estudante_ae3b9a6b8be82f04b781a0d416457bcad}\label{class_estudante_ae3b9a6b8be82f04b781a0d416457bcad}} 
-std\+::string {\bfseries get\+Nome} () const
+std\+::string \mbox{\hyperlink{class_estudante_ae3b9a6b8be82f04b781a0d416457bcad}{get\+Nome}} () const
 \item 
-\mbox{\Hypertarget{class_estudante_a248a0db07e684cc85aa85bcba3a10e39}\label{class_estudante_a248a0db07e684cc85aa85bcba3a10e39}} 
-void {\bfseries set\+Nome} (std\+::string Nome)
+void \mbox{\hyperlink{class_estudante_a248a0db07e684cc85aa85bcba3a10e39}{set\+Nome}} (std\+::string Nome)
 \item 
-\mbox{\Hypertarget{class_estudante_a317e599740655e13f721a63b96837140}\label{class_estudante_a317e599740655e13f721a63b96837140}} 
-std\+::list$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ {\bfseries get\+Turmas} () const
+std\+::list$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ \mbox{\hyperlink{class_estudante_a317e599740655e13f721a63b96837140}{get\+Turmas}} () const
 \item 
-\mbox{\Hypertarget{class_estudante_a3a68798cb405e2c79a8b30056f025f44}\label{class_estudante_a3a68798cb405e2c79a8b30056f025f44}} 
-void {\bfseries add\+Uc\+Turma} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&uc\+Turma)
+void \mbox{\hyperlink{class_estudante_a3a68798cb405e2c79a8b30056f025f44}{add\+Uc\+Turma}} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&uc\+Turma)
 \item 
-\mbox{\Hypertarget{class_estudante_ad928c0f28500b4d101b72faa2c841996}\label{class_estudante_ad928c0f28500b4d101b72faa2c841996}} 
-void {\bfseries rmv\+Uc\+Turma} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&uc\+Turma)
+void \mbox{\hyperlink{class_estudante_ad928c0f28500b4d101b72faa2c841996}{rmv\+Uc\+Turma}} (const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&uc\+Turma)
 \item 
-\mbox{\Hypertarget{class_estudante_a3ba4b3c205b3c5b0f523d59ea92202d0}\label{class_estudante_a3ba4b3c205b3c5b0f523d59ea92202d0}} 
-bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_estudante}{Estudante}} estudante) const
+bool \mbox{\hyperlink{class_estudante_a3ba4b3c205b3c5b0f523d59ea92202d0}{operator$<$}} (const \mbox{\hyperlink{class_estudante}{Estudante}} estudante) const
 \item 
-\mbox{\Hypertarget{class_estudante_adeb2da911b555e15a557086316a260f2}\label{class_estudante_adeb2da911b555e15a557086316a260f2}} 
-bool {\bfseries operator==} (const \mbox{\hyperlink{class_estudante}{Estudante}} estudante) const
+bool \mbox{\hyperlink{class_estudante_adeb2da911b555e15a557086316a260f2}{operator==}} (const \mbox{\hyperlink{class_estudante}{Estudante}} estudante) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -45,6 +36,108 @@ std\+::string {\bfseries nome}
 \mbox{\Hypertarget{class_estudante_af0b9d1f8a60333b7b9f9c34f057ed69b}\label{class_estudante_af0b9d1f8a60333b7b9f9c34f057ed69b}} 
 std\+::list$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ {\bfseries turmas}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_estudante_a3a68798cb405e2c79a8b30056f025f44}\label{class_estudante_a3a68798cb405e2c79a8b30056f025f44}} 
+\index{Estudante@{Estudante}!addUcTurma@{addUcTurma}}
+\index{addUcTurma@{addUcTurma}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{addUcTurma()}{addUcTurma()}}
+{\footnotesize\ttfamily void Estudante\+::add\+Uc\+Turma (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&}]{uc\+Turma }\end{DoxyParamCaption})}
+
+Adiciona as turmas relativas ao estudante 
+\begin{DoxyParams}{Parameters}
+{\em uc\+Turma} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_estudante_ae3b9a6b8be82f04b781a0d416457bcad}\label{class_estudante_ae3b9a6b8be82f04b781a0d416457bcad}} 
+\index{Estudante@{Estudante}!getNome@{getNome}}
+\index{getNome@{getNome}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Estudante\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Dá-\/nos o nome de um certo estudante \begin{DoxyReturn}{Returns}
+nome de estudante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estudante_a154968e7439b30ae9b4264278187c4c9}\label{class_estudante_a154968e7439b30ae9b4264278187c4c9}} 
+\index{Estudante@{Estudante}!getNumero@{getNumero}}
+\index{getNumero@{getNumero}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{getNumero()}{getNumero()}}
+{\footnotesize\ttfamily int Estudante\+::get\+Numero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Dá-\/nos o número de um certo estudante \begin{DoxyReturn}{Returns}
+número de estudante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estudante_a317e599740655e13f721a63b96837140}\label{class_estudante_a317e599740655e13f721a63b96837140}} 
+\index{Estudante@{Estudante}!getTurmas@{getTurmas}}
+\index{getTurmas@{getTurmas}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{getTurmas()}{getTurmas()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} $>$ Estudante\+::get\+Turmas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Dá-\/nos uma lista com as turmas \begin{DoxyReturn}{Returns}
+lista com turmas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estudante_a3ba4b3c205b3c5b0f523d59ea92202d0}\label{class_estudante_a3ba4b3c205b3c5b0f523d59ea92202d0}} 
+\index{Estudante@{Estudante}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Estudante\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_estudante}{Estudante}}}]{estudante }\end{DoxyParamCaption}) const}
+
+Ajuda-\/nos no set a comparar o número de estudantes 
+\begin{DoxyParams}{Parameters}
+{\em estudante} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool para a comparaçáo entre números 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estudante_adeb2da911b555e15a557086316a260f2}\label{class_estudante_adeb2da911b555e15a557086316a260f2}} 
+\index{Estudante@{Estudante}!operator==@{operator==}}
+\index{operator==@{operator==}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Estudante\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_estudante}{Estudante}}}]{estudante }\end{DoxyParamCaption}) const}
+
+Ajuda-\/nos no set a comparar o número de estudantes 
+\begin{DoxyParams}{Parameters}
+{\em estudante} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool para a igualdade dos números 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estudante_ad928c0f28500b4d101b72faa2c841996}\label{class_estudante_ad928c0f28500b4d101b72faa2c841996}} 
+\index{Estudante@{Estudante}!rmvUcTurma@{rmvUcTurma}}
+\index{rmvUcTurma@{rmvUcTurma}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{rmvUcTurma()}{rmvUcTurma()}}
+{\footnotesize\ttfamily void Estudante\+::rmv\+Uc\+Turma (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_uc_turma}{Uc\+Turma}} \&}]{uc\+Turma }\end{DoxyParamCaption})}
+
+Remove turmas de um determinado estudante 
+\begin{DoxyParams}{Parameters}
+{\em uc\+Turma} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_estudante_a248a0db07e684cc85aa85bcba3a10e39}\label{class_estudante_a248a0db07e684cc85aa85bcba3a10e39}} 
+\index{Estudante@{Estudante}!setNome@{setNome}}
+\index{setNome@{setNome}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Estudante\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{Nome }\end{DoxyParamCaption})}
+
+Permite definir o nome para um estudante 
+\begin{DoxyParams}{Parameters}
+{\em Nome} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_estudante_a7cbac12585d8df11892052a50d440ca2}\label{class_estudante_a7cbac12585d8df11892052a50d440ca2}} 
+\index{Estudante@{Estudante}!setNumero@{setNumero}}
+\index{setNumero@{setNumero}!Estudante@{Estudante}}
+\doxysubsubsection{\texorpdfstring{setNumero()}{setNumero()}}
+{\footnotesize\ttfamily void Estudante\+::set\+Numero (\begin{DoxyParamCaption}\item[{int}]{Numero }\end{DoxyParamCaption})}
+
+Permite definir o número para um estudante 
+\begin{DoxyParams}{Parameters}
+{\em Numero} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

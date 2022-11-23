@@ -14,7 +14,7 @@ class readFiles {
 
 
 public:
-    std::set<Slot> horarios;
+    std::vector<Slot> horarios;
     std::list<Estudante> estudantes;
     std::vector<UcTurma> ucturmas;
     /*!

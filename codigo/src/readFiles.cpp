@@ -36,24 +36,23 @@ void readFiles::genHorarios(){
         while (getline(in, line)) {
             char& b = (char& ) ",";
             vector<string> Horarios =  reducer(line, b);
-            for(auto c: Horarios){
-                string day = Horarios[2];
-                string type = Horarios[5];
-                float initial = stof(Horarios[3]);
-                float duracao = stof(Horarios[4]);
-                float final = initial + duracao;
-                string uc = Horarios[1];
-                string turma = Horarios[0];
-                UcTurma ucTurma(uc, turma);
-                Slot slot(day, initial, final, type, duracao, ucTurma);
-                //cout <<  slot.getDia() <<endl;// turma
-                //cout << slot.getHoraInicio() <<endl;// numero
-                //cout << slot.getDuracao()<<endl;// dia
-                //cout << slot.getHoraFim() <<endl;// hora incial
-                //cout << slot.getTipo()<< endl;// duraÃ§ao
-                //cout<<"turma: " << slot.getUCTurma().getCodTurma()<<". uc:" <<slot.getUCTurma().getCodUc()<<"."<<endl;// tipo
-                horarios.insert(slot);
-            }
+
+            string day = Horarios[2];
+            string type = Horarios[5];
+            float initial = stof(Horarios[3]);
+            float duracao = stof(Horarios[4]);
+            float final = initial + duracao;
+            string uc = Horarios[1];
+            string turma = Horarios[0];
+            UcTurma ucTurma(uc, turma);
+            Slot slot(day, initial, final, type, duracao, ucTurma);
+            //cout <<  slot.getDia() <<endl;// turma
+            //cout << slot.getHoraInicio() <<endl;// numero
+            //cout << slot.getDuracao()<<endl;// dia
+            //cout << slot.getHoraFim() <<endl;// hora incial
+            //cout << slot.getTipo()<< endl;// duraÃ§ao
+            //cout<<"turma: " << slot.getUCTurma().getCodTurma()<<". uc:" <<slot.getUCTurma().getCodUc()<<"."<<endl;// tipo
+            horarios.push_back(slot);
 
         }
     }
@@ -128,9 +127,9 @@ void readFiles::getHorarioEstudanteDia(int numero, string dia){
     string s;
     set<string> horespecifico;
 
-    for(auto c : horarios){
+    /*for(auto c : horarios){
         cout << c.getUCTurma().getCodTurma() << " " <<  c.getUCTurma().getCodUc() << " " <<  c.getDia() << " " << c.getHoraInicio()  << " " <<  c.getHoraFim() << " " <<  c.getDuracao() << endl;
-    }
+    }*/
     /*
     for(auto c: estudantes){
         for(auto f: c.getTurmas()){
@@ -139,7 +138,7 @@ void readFiles::getHorarioEstudanteDia(int numero, string dia){
     }*/
 
 
-    /*
+
     for(auto c: estudantes){
         if (c.getNumero() == numero){
             for(auto i: horarios){
@@ -159,9 +158,9 @@ void readFiles::getHorarioEstudanteDia(int numero, string dia){
 
     for(auto o : horespecifico){
         cout << o << endl;
-    }*/
+    }
 
-
+    horespecifico = {};
 
 
 }

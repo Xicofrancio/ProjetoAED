@@ -42,9 +42,7 @@ bool Slot::erro(Slot slot) const {
 
 }
 
-bool Slot::operator<(Slot slot) {
-    if(duracao<slot.duracao)
-}
+
 
 void Slot::setUCTurma(UcTurma ucTurma) {ucturma = ucTurma;}
 

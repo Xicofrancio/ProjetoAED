@@ -68,6 +68,7 @@ void cli::helper(){
             switch (l) {
                 case 1:
                     estudantes.getHorarioEstudante(202028547);
+                    break;
                 case 2:
                     int w;
                     cout << "1) Ordenar por ordem alfabetica" << endl << "2) Ordenar por numero de estrudante decrescente" << endl << "3) Ordenar por numero de estrudante crescente";

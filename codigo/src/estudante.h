@@ -19,7 +19,7 @@ private:
     std::string nome;
     std::list<UcTurma> turmas;
 public:
-    Estudante(int numero, std::string nome);
+    Estudante(int Numero, std::string Nome);
 
     /*!
      * Dá-nos o número de um certo estudante
@@ -76,6 +76,8 @@ public:
      * @return bool para a igualdade dos números
      */
     bool operator==(const Estudante estudante) const;
+
+    Estudante(int numero, std::string nome, std::list<UcTurma> turmas);
 };
 
 #endif //ESTUDANTE_H

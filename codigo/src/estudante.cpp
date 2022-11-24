@@ -43,5 +43,11 @@ bool Estudante::operator==(const Estudante estudante) const {
     return numero == estudante.numero;
 }
 
+Estudante::Estudante(int numero, std::string nome, std::list<UcTurma> turmas) {
+    this->numero = numero;
+    this->nome = nome;
+    this->turmas = turmas;
+}
+
 
 

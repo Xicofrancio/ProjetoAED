@@ -15,7 +15,7 @@ class readFiles {
 
 public:
     std::vector<Slot> horarios;
-    std::list<Estudante> estudantes;
+    std::set<Estudante> estudantes;
     std::vector<UcTurma> ucturmas;
     /*!
      * armazena estudantes na respetiva classe

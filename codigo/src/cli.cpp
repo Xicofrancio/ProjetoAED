@@ -74,17 +74,22 @@ void cli::helper(){
                     cout << "1) Ordenar por ordem alfabetica" << endl << "2) Ordenar por numero de estrudante decrescente" << endl << "3) Ordenar por numero de estrudante crescente";
                     cin >> w;
                     if(w == 1){
+                        /*
                         estudantes.estudantes.sort(sortbyname);
                         estudantes.visualizarEstudantes();
+                         */
                     }
                     if(w == 2){
+                        /*
                         estudantes.estudantes.sort(sortnumberdecrescente);
                         estudantes.visualizarEstudantes();
-                    }
+                    */
+                         }
                     if (w == 3){
-                        estudantes.estudantes.sort(sortnumbercrescente);
+                       /* estudantes.estudantes.sort(sortnumbercrescente);
                         estudantes.visualizarEstudantes();
-                    }
+                    */
+                        }
             }
         }
     }

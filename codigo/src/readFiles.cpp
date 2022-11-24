@@ -81,6 +81,54 @@ void readFiles::genUC(){
 
 
 void readFiles::genEtudantes() {
+    std::ifstream file;
+    file.open("C:\\Users\\USER\\Desktop\\Horario_estudantes_aed-master\\students_classes.csv");
+    std::string line;
+    std::getline(file, line);
+
+    std::list<UcTurma> temp_list;
+    bool first_check = false;
+    //current line
+    int up = 0;
+    std::string tuple[2];
+    std::string temp_name;
+    //last line
+    int last;
+    std::string last_temp_name;
+
+    while (!file.eof()) {// O(n^2) notation
+        if (std::getline(file, line)) {
+            std::stringstream input(line);
+            std::string word;
+            //get up
+            std::getline(input, word, ',');
+            up = std::stoi(word);
+            //gets temp name
+            std::getline(input, word, ',');
+            temp_name = word;
+            //gets uc
+            for (int i = 0; i < 2; i++) {
+                std::getline(input, word, ',');
+                tuple[i] = word;
+            }
+            //checks if last != current or is the first value
+            if (last != up and first_check) {
+                estudantes.insert(Estudante(last, last_temp_name, temp_list));
+                temp_list.clear();
+                temp_list.push_back(UcTurma(tuple[0], tuple[1]));
+            } else {
+                temp_list.push_back(UcTurma(tuple[0], tuple[1]));
+            }
+            last_temp_name = temp_name;
+            last = up;
+            first_check = true;
+        }else{
+            last_temp_name = temp_name;
+            last = up;
+            estudantes.insert(Estudante(last, last_temp_name, temp_list));
+        }
+    }
+    /*
     string ant;
     string line;
     ifstream in("C:\\Users\\USER\\Desktop\\Universidade\\2ano\\Algoritmos e estrutura de dados\\Fim\\csv\\students_classes.csv");
@@ -113,6 +161,8 @@ void readFiles::genEtudantes() {
 
         }
     }
+     */
+
 }
 
 void readFiles::getHorarioEstudante(int numero_estudante) {
@@ -137,8 +187,26 @@ void readFiles::getHorarioEstudanteDia(int numero, string dia){
         }
     }*/
 
+for(auto c : estudantes){
+    if(c.getNumero() == numero){
+        for(auto i: c.getTurmas()){
+            s = "Codigo UC" + i.getCodUc() + "Codigo turma: " + i.getCodTurma();
+            if(horespecifico.find(s) != horespecifico.end()){
+                continue;
+            }else{
+                horespecifico.insert(s);
+            }
+
+        }
+    }
+
+}
+for(auto u:horespecifico){
+    cout << u << endl;
+}
 
 
+/*
     for(auto c: estudantes){
         if (c.getNumero() == numero){
             for(auto i: horarios){
@@ -156,13 +224,13 @@ void readFiles::getHorarioEstudanteDia(int numero, string dia){
 
     }
 
-    for(auto o : horespecifico){
+for(auto o : horespecifico){
         cout << o << endl;
     }
 
     horespecifico = {};
 
-
+*/
 }
 
 void readFiles::visualizarEstudantes() {
